@@ -1,0 +1,43 @@
+{
+  "coord": {
+    "lon": "${weather.longitude}",
+    "lat": "${weather.latitude}"
+  },
+  "weather": [
+    {
+      "id": "type:Integer",
+      "main": "type:String",
+      "description": "type:String",
+      "icon": "skip"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": "type:Double",
+    "feels_like": "type:Double",
+    "temp_min": "type:Double",
+    "temp_max": "type:Double",
+    "pressure": "type:Double",
+    "humidity": "type:Double",
+    "sea_level": "type:Double",
+    "grnd_level": "type:Double"
+  },
+  "visibility": "type:Integer",
+  "wind": {
+    "speed": "type:Double",
+    "deg": "type:Double",
+    "gust": "type:Double"
+  },
+  "clouds": {
+    "all": "type:Double"
+  },
+  "dt": "type:Integer",
+  "sys": {
+    "sunrise": "type:Integer",
+    "sunset": "type:Integer"
+  },
+  "timezone": "type:Integer",
+  "id": "type:Integer",
+  "name": "",
+  "cod": "type:Integer"
+}

@@ -14,8 +14,11 @@ public class CurrentWeatherTest {
 
         GetCurrentWeatherByLocation getCurrentWeatherByLocation =
                 new GetCurrentWeatherByLocation(weather.getLatitude(), weather.getLongitude());
+        getCurrentWeatherByLocation.addProperty("weather", weather);
 
         getCurrentWeatherByLocation.expectResponseStatus(HttpResponseStatusType.OK_200);
         getCurrentWeatherByLocation.callAPI();
+
+        getCurrentWeatherByLocation.validateResponse();
     }
 }
