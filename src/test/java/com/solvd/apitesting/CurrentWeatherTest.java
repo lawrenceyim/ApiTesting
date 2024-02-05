@@ -7,14 +7,22 @@ import org.testng.annotations.Test;
 
 public class CurrentWeatherTest {
     @Test
-    public void verifyGetCurrentWeatherByLocation() {
-        Weather weather = new Weather();
-        weather.setLatitude(38.8951);
-        weather.setLongitude(-77.0364);
-
+    public void verifyGetCurrentWeatherByLocationWashingtonDc() {
         GetCurrentWeatherByLocation getCurrentWeatherByLocation =
-                new GetCurrentWeatherByLocation(weather.getLatitude(), weather.getLongitude());
-        getCurrentWeatherByLocation.addProperty("weather", weather);
+                new GetCurrentWeatherByLocation(38.8951, -77.0364);
+
+        getCurrentWeatherByLocation.expectResponseStatus(HttpResponseStatusType.OK_200);
+        getCurrentWeatherByLocation.callAPI();
+
+        getCurrentWeatherByLocation.validateResponse();
+    }
+
+    // This test fails
+    // NewYork has a "gust": "type:Double" property in its response that Washington does not have
+    @Test
+    public void verifyGetCurrentWeatherByLocationNewYork() {
+        GetCurrentWeatherByLocation getCurrentWeatherByLocation =
+                new GetCurrentWeatherByLocation(40.7128, -74.0060);
 
         getCurrentWeatherByLocation.expectResponseStatus(HttpResponseStatusType.OK_200);
         getCurrentWeatherByLocation.callAPI();
