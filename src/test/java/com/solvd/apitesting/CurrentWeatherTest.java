@@ -19,10 +19,22 @@ public class CurrentWeatherTest {
 
     // This test fails
     // NewYork has a "gust": "type:Double" property in its response that Washington does not have
+    // UPDATE: test failure disappeared after adding Atlanta test case. Cause unknown
     @Test
     public void verifyGetCurrentWeatherByLocationNewYork() {
         GetCurrentWeatherByLocation getCurrentWeatherByLocation =
                 new GetCurrentWeatherByLocation(40.7128, -74.0060);
+
+        getCurrentWeatherByLocation.expectResponseStatus(HttpResponseStatusType.OK_200);
+        getCurrentWeatherByLocation.callAPI();
+
+        getCurrentWeatherByLocation.validateResponse();
+    }
+
+    @Test
+    public void verifyGetCurrentWeatherByLocationAtlanta() {
+        GetCurrentWeatherByLocation getCurrentWeatherByLocation =
+                new GetCurrentWeatherByLocation(33.753746, -84.386330);
 
         getCurrentWeatherByLocation.expectResponseStatus(HttpResponseStatusType.OK_200);
         getCurrentWeatherByLocation.callAPI();
