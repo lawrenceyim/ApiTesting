@@ -14,8 +14,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <carina-api>1.2.4</carina-api>
-        <log4j-api>2.21.1</log4j-api>
-        <log4j-core>2.21.1</log4j-core>
         <testng>7.9.0</testng>
 
     </properties>
@@ -25,16 +23,6 @@
             <groupId>com.zebrunner</groupId>
             <artifactId>carina-api</artifactId>
             <version>${carina-api}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-api</artifactId>
-            <version>${log4j-api}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-            <version>${log4j-core}</version>
         </dependency>
         <dependency>
             <groupId>org.testng</groupId>
