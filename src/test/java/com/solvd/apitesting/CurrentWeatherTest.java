@@ -43,13 +43,28 @@ public class CurrentWeatherTest {
     }
 
     // This test fails
-    //    java.lang.AssertionError: weather[]
-    //    Arrays length differs. Expected length=1 but actual length=2
-    //    Unexpected: snow
+    // java.lang.AssertionError: weather[]
+    // Arrays length differs. Expected length=1 but actual length=2
+    // Unexpected: snow
     @Test
     public void verifyGetCurrentWeatherByLocationTokyo() {
         GetCurrentWeatherByLocation getCurrentWeatherByLocation =
                 new GetCurrentWeatherByLocation(35.652832, 139.839478);
+
+        getCurrentWeatherByLocation.expectResponseStatus(HttpResponseStatusType.OK_200);
+        getCurrentWeatherByLocation.callAPI();
+
+        getCurrentWeatherByLocation.validateResponse();
+    }
+
+    // This test fails
+    // Unexpected: grnd_level
+    // Unexpected: sea_level
+    // Unexpected: gust
+    @Test
+    public void verifyGetCurrentWeatherByLocationSeoul() {
+        GetCurrentWeatherByLocation getCurrentWeatherByLocation =
+                new GetCurrentWeatherByLocation(37.532600, 127.024612);
 
         getCurrentWeatherByLocation.expectResponseStatus(HttpResponseStatusType.OK_200);
         getCurrentWeatherByLocation.callAPI();
