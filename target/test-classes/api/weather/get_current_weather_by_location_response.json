@@ -18,12 +18,21 @@
     "temp_min": "type:Double",
     "temp_max": "type:Double",
     "pressure": "type:Integer",
-    "humidity": "type:Integer"
+    "humidity": "type:Integer",
+    <#if weather.hasGroundLevel>
+            "grnd_level": "type:Integer",
+    </#if>
+    <#if weather.hasSeaLevel>
+            "sea_level": "type:Integer",
+    </#if>
   },
   "visibility": "type:Integer",
   "wind": {
     "speed": "type:Double",
-    "deg": "type:Integer"
+    "deg": "type:Integer",
+    <#if weather.hasGust>
+            "gust": "type:Double",
+    </#if>
   },
   "clouds": {
     "all": "type:Integer"

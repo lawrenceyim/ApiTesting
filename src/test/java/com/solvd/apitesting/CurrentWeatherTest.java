@@ -1,17 +1,20 @@
 package com.solvd.apitesting;
 
 import com.solvd.apitesting.api.GetCurrentWeatherByLocation;
-import com.solvd.apitesting.domain.Weather;
+import com.solvd.apitesting.domain.CurrentWeatherResponse;
 import com.zebrunner.carina.api.http.HttpResponseStatusType;
+import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
 public class CurrentWeatherTest {
     /*
     KNOWN ISSUES:
     main.feels_like changes between type:Double and type:Integer
-    wind.gust may or may not exist in the response
     wind.speed changes between type:Double and type:Integer
     array length of weather[] may be longer than 1
+
+    FIXED ISSUES:
+    wind.gust may or may not exist in the response. (fixed by checking response for gust before validation)
     */
 
     @Test
@@ -20,21 +23,36 @@ public class CurrentWeatherTest {
                 new GetCurrentWeatherByLocation(38.8951, -77.0364);
 
         getCurrentWeatherByLocation.expectResponseStatus(HttpResponseStatusType.OK_200);
-        getCurrentWeatherByLocation.callAPI();
+
+        // Create private function to eliminate code repetition?
+        // START
+        Response response = getCurrentWeatherByLocation.callAPI();
+        String responseBody = response.getBody().asString();
+        
+        CurrentWeatherResponse weather = new CurrentWeatherResponse();
+        getCurrentWeatherByLocation.addProperty("weather", weather);
+        weather.setHasGust(responseBody.contains("gust"));
+        weather.setHasGroundLevel(responseBody.contains("grnd_level"));
+        weather.setHasSeaLevel(responseBody.contains("sea_level"));
+        // END
 
         getCurrentWeatherByLocation.validateResponse();
     }
 
-    // This test fails
-    // NewYork has a "gust": "type:Double" property in its response that Washington does not have
-    // UPDATE: test failure disappeared after adding Atlanta test case. Cause unknown
     @Test
     public void verifyGetCurrentWeatherByLocationNewYork() {
         GetCurrentWeatherByLocation getCurrentWeatherByLocation =
                 new GetCurrentWeatherByLocation(40.7128, -74.0060);
 
         getCurrentWeatherByLocation.expectResponseStatus(HttpResponseStatusType.OK_200);
-        getCurrentWeatherByLocation.callAPI();
+        Response response = getCurrentWeatherByLocation.callAPI();
+        String responseBody = response.getBody().asString();
+
+        CurrentWeatherResponse weather = new CurrentWeatherResponse();
+        getCurrentWeatherByLocation.addProperty("weather", weather);
+        weather.setHasGust(responseBody.contains("gust"));
+        weather.setHasGroundLevel(responseBody.contains("grnd_level"));
+        weather.setHasSeaLevel(responseBody.contains("sea_level"));
 
         getCurrentWeatherByLocation.validateResponse();
     }
@@ -45,7 +63,14 @@ public class CurrentWeatherTest {
                 new GetCurrentWeatherByLocation(33.753746, -84.386330);
 
         getCurrentWeatherByLocation.expectResponseStatus(HttpResponseStatusType.OK_200);
-        getCurrentWeatherByLocation.callAPI();
+        Response response = getCurrentWeatherByLocation.callAPI();
+        String responseBody = response.getBody().asString();
+
+        CurrentWeatherResponse weather = new CurrentWeatherResponse();
+        getCurrentWeatherByLocation.addProperty("weather", weather);
+        weather.setHasGust(responseBody.contains("gust"));
+        weather.setHasGroundLevel(responseBody.contains("grnd_level"));
+        weather.setHasSeaLevel(responseBody.contains("sea_level"));
 
         getCurrentWeatherByLocation.validateResponse();
     }
@@ -60,22 +85,32 @@ public class CurrentWeatherTest {
                 new GetCurrentWeatherByLocation(35.652832, 139.839478);
 
         getCurrentWeatherByLocation.expectResponseStatus(HttpResponseStatusType.OK_200);
-        getCurrentWeatherByLocation.callAPI();
+        Response response = getCurrentWeatherByLocation.callAPI();
+        String responseBody = response.getBody().asString();
+
+        CurrentWeatherResponse weather = new CurrentWeatherResponse();
+        getCurrentWeatherByLocation.addProperty("weather", weather);
+        weather.setHasGust(responseBody.contains("gust"));
+        weather.setHasGroundLevel(responseBody.contains("grnd_level"));
+        weather.setHasSeaLevel(responseBody.contains("sea_level"));
 
         getCurrentWeatherByLocation.validateResponse();
     }
 
-    // This test fails
-    // Unexpected: grnd_level
-    // Unexpected: sea_level
-    // Unexpected: gust
     @Test
     public void verifyGetCurrentWeatherByLocationSeoul() {
         GetCurrentWeatherByLocation getCurrentWeatherByLocation =
                 new GetCurrentWeatherByLocation(37.532600, 127.024612);
 
         getCurrentWeatherByLocation.expectResponseStatus(HttpResponseStatusType.OK_200);
-        getCurrentWeatherByLocation.callAPI();
+        Response response = getCurrentWeatherByLocation.callAPI();
+        String responseBody = response.getBody().asString();
+
+        CurrentWeatherResponse weather = new CurrentWeatherResponse();
+        getCurrentWeatherByLocation.addProperty("weather", weather);
+        weather.setHasGust(responseBody.contains("gust"));
+        weather.setHasGroundLevel(responseBody.contains("grnd_level"));
+        weather.setHasSeaLevel(responseBody.contains("sea_level"));
 
         getCurrentWeatherByLocation.validateResponse();
     }
