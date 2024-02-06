@@ -6,6 +6,8 @@ import com.zebrunner.carina.api.http.HttpResponseStatusType;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
+import static com.solvd.apitesting.utils.Generator.generateCurrentWeatherResponse;
+
 public class CurrentWeatherTest {
     /*
     KNOWN ISSUES:
@@ -84,14 +86,5 @@ public class CurrentWeatherTest {
         getCurrentWeatherByLocation.addProperty("weather", weather);
 
         getCurrentWeatherByLocation.validateResponse();
-    }
-
-    private CurrentWeatherResponse generateCurrentWeatherResponse(Response response) {
-        String responseBody = response.getBody().asString();
-        CurrentWeatherResponse weather = new CurrentWeatherResponse();
-        weather.setHasGust(responseBody.contains("gust"));
-        weather.setHasGroundLevel(responseBody.contains("grnd_level"));
-        weather.setHasSeaLevel(responseBody.contains("sea_level"));
-        return weather;
     }
 }
