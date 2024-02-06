@@ -23,18 +23,9 @@ public class CurrentWeatherTest {
                 new GetCurrentWeatherByLocation(38.8951, -77.0364);
 
         getCurrentWeatherByLocation.expectResponseStatus(HttpResponseStatusType.OK_200);
-
-        // Create private function to eliminate code repetition?
-        // START
         Response response = getCurrentWeatherByLocation.callAPI();
-        String responseBody = response.getBody().asString();
-        
-        CurrentWeatherResponse weather = new CurrentWeatherResponse();
+        CurrentWeatherResponse weather = generateCurrentWeatherResponse(response);
         getCurrentWeatherByLocation.addProperty("weather", weather);
-        weather.setHasGust(responseBody.contains("gust"));
-        weather.setHasGroundLevel(responseBody.contains("grnd_level"));
-        weather.setHasSeaLevel(responseBody.contains("sea_level"));
-        // END
 
         getCurrentWeatherByLocation.validateResponse();
     }
@@ -46,13 +37,8 @@ public class CurrentWeatherTest {
 
         getCurrentWeatherByLocation.expectResponseStatus(HttpResponseStatusType.OK_200);
         Response response = getCurrentWeatherByLocation.callAPI();
-        String responseBody = response.getBody().asString();
-
-        CurrentWeatherResponse weather = new CurrentWeatherResponse();
+        CurrentWeatherResponse weather = generateCurrentWeatherResponse(response);
         getCurrentWeatherByLocation.addProperty("weather", weather);
-        weather.setHasGust(responseBody.contains("gust"));
-        weather.setHasGroundLevel(responseBody.contains("grnd_level"));
-        weather.setHasSeaLevel(responseBody.contains("sea_level"));
 
         getCurrentWeatherByLocation.validateResponse();
     }
@@ -64,13 +50,8 @@ public class CurrentWeatherTest {
 
         getCurrentWeatherByLocation.expectResponseStatus(HttpResponseStatusType.OK_200);
         Response response = getCurrentWeatherByLocation.callAPI();
-        String responseBody = response.getBody().asString();
-
-        CurrentWeatherResponse weather = new CurrentWeatherResponse();
+        CurrentWeatherResponse weather = generateCurrentWeatherResponse(response);
         getCurrentWeatherByLocation.addProperty("weather", weather);
-        weather.setHasGust(responseBody.contains("gust"));
-        weather.setHasGroundLevel(responseBody.contains("grnd_level"));
-        weather.setHasSeaLevel(responseBody.contains("sea_level"));
 
         getCurrentWeatherByLocation.validateResponse();
     }
@@ -86,13 +67,8 @@ public class CurrentWeatherTest {
 
         getCurrentWeatherByLocation.expectResponseStatus(HttpResponseStatusType.OK_200);
         Response response = getCurrentWeatherByLocation.callAPI();
-        String responseBody = response.getBody().asString();
-
-        CurrentWeatherResponse weather = new CurrentWeatherResponse();
+        CurrentWeatherResponse weather = generateCurrentWeatherResponse(response);
         getCurrentWeatherByLocation.addProperty("weather", weather);
-        weather.setHasGust(responseBody.contains("gust"));
-        weather.setHasGroundLevel(responseBody.contains("grnd_level"));
-        weather.setHasSeaLevel(responseBody.contains("sea_level"));
 
         getCurrentWeatherByLocation.validateResponse();
     }
@@ -104,14 +80,18 @@ public class CurrentWeatherTest {
 
         getCurrentWeatherByLocation.expectResponseStatus(HttpResponseStatusType.OK_200);
         Response response = getCurrentWeatherByLocation.callAPI();
-        String responseBody = response.getBody().asString();
-
-        CurrentWeatherResponse weather = new CurrentWeatherResponse();
+        CurrentWeatherResponse weather = generateCurrentWeatherResponse(response);
         getCurrentWeatherByLocation.addProperty("weather", weather);
+
+        getCurrentWeatherByLocation.validateResponse();
+    }
+
+    private CurrentWeatherResponse generateCurrentWeatherResponse(Response response) {
+        String responseBody = response.getBody().asString();
+        CurrentWeatherResponse weather = new CurrentWeatherResponse();
         weather.setHasGust(responseBody.contains("gust"));
         weather.setHasGroundLevel(responseBody.contains("grnd_level"));
         weather.setHasSeaLevel(responseBody.contains("sea_level"));
-
-        getCurrentWeatherByLocation.validateResponse();
+        return weather;
     }
 }
