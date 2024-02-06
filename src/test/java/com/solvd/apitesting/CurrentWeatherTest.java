@@ -6,6 +6,14 @@ import com.zebrunner.carina.api.http.HttpResponseStatusType;
 import org.testng.annotations.Test;
 
 public class CurrentWeatherTest {
+    /*
+    KNOWN ISSUES:
+    main.feels_like changes between type:Double and type:Integer
+    wind.gust may or may not exist in the response
+    wind.speed changes between type:Double and type:Integer
+    array length of weather[] may be longer than 1
+    */
+
     @Test
     public void verifyGetCurrentWeatherByLocationWashingtonDc() {
         GetCurrentWeatherByLocation getCurrentWeatherByLocation =
