@@ -1,0 +1,24 @@
+{
+  "coord": {
+    "lon": "type:Double",
+    "lat": "type:Double"
+  },
+  "list": [
+    {
+      "main": {
+        "aqi": "type:Integer"
+      },
+      "components": {
+        "co": "type:Double",
+        "no": "type:Double",
+        "no2": "type:Double",
+        "o3": "type:Double",
+        "so2": "type:Double",
+        "pm2_5": "type:Double",
+        "pm10": "type:Double",
+        "nh3": "type:Double"
+      },
+      "dt": "type:Integer"
+    }
+  ]
+}
