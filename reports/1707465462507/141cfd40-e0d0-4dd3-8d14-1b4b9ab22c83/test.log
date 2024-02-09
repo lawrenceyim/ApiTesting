@@ -1,0 +1,6 @@
+[2024-02-09 07:57:55] [1] [WARN] Reporting disabled: using no op test run registrar
+[2024-02-09 07:57:55] [1] [INFO] TEST [Surefire test - verifyLandingPageOpenTest] STARTED at [02:57:55 2024-02-09]
+[2024-02-09 07:57:55] [1] [INFO] Starting driver session...
+[2024-02-09 07:57:56] [1] [INFO] Driver session started.
+[2024-02-09 07:57:56] [1] [INFO] INFO: opening url 'https://www.warframe.com/landing'
+[2024-02-09 07:57:58] [1] [INFO] TEST [Surefire test - verifyLandingPageOpenTest] PASSED at [02:57:58 2024-02-09]

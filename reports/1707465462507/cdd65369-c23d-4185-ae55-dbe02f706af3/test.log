@@ -1,0 +1,92 @@
+[2024-02-09 07:57:43] [1] [WARN] Reporting disabled: using no op test run registrar
+[2024-02-09 07:57:43] [1] [INFO] TEST [Surefire test - verifyGetCurrentAirPollutionByLocationWashingtonDc] STARTED at [02:57:43 2024-02-09]
+[2024-02-09 07:57:45] [1] [INFO] Request method:	GET
+Request URI:	https://api.openweathermap.org/data/2.5/air_pollution?lat=38.8951&lon=-77.0364&appid=0cd24b47cec1357b9a0cc9df9f565e02
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Cookies:		<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Body:			<none>
+HTTP/1.1 200 OK
+Server: openresty
+Date: Fri, 09 Feb 2024 07:57:44 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 190
+Connection: keep-alive
+X-Cache-Key: /data/2.5/air_pollution?lat=38.9&lon=-77.04
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET, POST
+
+{
+    "coord": {
+        "lon": -77.0364,
+        "lat": 38.8951
+    },
+    "list": [
+        {
+            "main": {
+                "aqi": 2
+            },
+            "components": {
+                "co": 340.46,
+                "no": 0,
+                "no2": 17.14,
+                "o3": 56.51,
+                "so2": 2.33,
+                "pm2_5": 17.94,
+                "pm10": 20.01,
+                "nh3": 0.25
+            },
+            "dt": 1707465464
+        }
+    ]
+}
+
+[2024-02-09 07:57:45] [1] [ERROR] TEST [Surefire test - verifyGetCurrentAirPollutionByLocationWashingtonDc] FAILED at [02:57:45 2024-02-09] - list[0].components.no
+Value type 'Integer' doesn't match to expected type 'Double'
+
+
+org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:482)
+org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:464)
+com.zebrunner.carina.api.AbstractApiMethodV2.validateResponse(AbstractApiMethodV2.java:339)
+com.zebrunner.carina.api.AbstractApiMethodV2.validateResponse(AbstractApiMethodV2.java:299)
+com.zebrunner.carina.api.AbstractApiMethodV2.validateResponse(AbstractApiMethodV2.java:363)
+com.solvd.carinatestautomation.api.CurrentAirPollutionTest.verifyGetCurrentAirPollutionByLocationWashingtonDc(CurrentAirPollutionTest.java:15)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.base/java.lang.reflect.Method.invoke(Method.java:566)
+org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+org.testng.TestRunner.privateRun(TestRunner.java:819)
+org.testng.TestRunner.run(TestRunner.java:619)
+org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+org.testng.SuiteRunner.run(SuiteRunner.java:336)
+org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+org.testng.TestNG.runSuites(TestNG.java:1134)
+org.testng.TestNG.run(TestNG.java:1101)
+org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)

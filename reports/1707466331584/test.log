@@ -1,0 +1,20 @@
+[2024-02-09 08:12:11] [1] [INFO] 
+=========== WebDriver configuration ===========
+browser=chrome
+selenium_url=http://localhost:4444/wd/hub
+-------------- Driver capabilities ------------
+===============================================
+
+[2024-02-09 08:12:11] [1] [WARN] Reporting disabled: using no op test run registrar
+[2024-02-09 08:12:12] [1] [INFO] Set thread-count=1
+[2024-02-09 08:12:12] [1] [INFO] Set data-provider-thread-count=1
+[2024-02-09 08:12:12] [1] [INFO] CARINA_CORE_VERSION: 1.2.6
+[2024-02-09 08:13:03] [1] [INFO] INFO: '**************** Test execution summary ****************'.
+[2024-02-09 08:13:03] [1] [INFO] RESULT #1: TEST [Surefire test - verifyEulaButtonTest] FAIL [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707466331584/03f6d4c2-e2af-4dab-82a7-11a23f6c7abd/test.log]
+[2024-02-09 08:13:03] [1] [INFO] RESULT #2: TEST [Surefire test - verifyLandingPageOpenTest] PASS [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707466331584/7aee50fa-4cfd-4426-888b-607d2616753b/test.log]
+[2024-02-09 08:13:03] [1] [INFO] RESULT #3: TEST [Surefire test - verifyLandingToHomeButtonTest] PASS [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707466331584/47e6d394-615c-4243-b887-d49114cc7597/test.log]
+[2024-02-09 08:13:03] [1] [INFO] RESULT #4: TEST [Surefire test - verifyNewsButtonTest] FAIL [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707466331584/145f77bd-bf71-47f5-b5bd-7c32aff50514/test.log]
+[2024-02-09 08:13:03] [1] [INFO] RESULT #5: TEST [Surefire test - verifyPrivacyPolicyButtonTest] FAIL [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707466331584/775d53b9-c108-4665-9435-2f64d7f55fbc/test.log]
+[2024-02-09 08:13:03] [1] [INFO] RESULT #6: TEST [Surefire test - verifyRotatingButtonTest] PASS [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707466331584/aba73bc9-e5e9-4e04-9c4a-c7ae49f7a4ff/test.log]
+[2024-02-09 08:13:03] [1] [INFO] RESULT #7: TEST [Surefire test - verifyTermsOfUseButtonTest] FAIL [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707466331584/b2158803-3073-420f-8823-239cb40ab710/test.log]
+[2024-02-09 08:13:03] [1] [INFO] RESULT #8: TEST [Surefire test - verifyVideosButtonTest] FAIL [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707466331584/76ea437f-e01e-4d53-8fdc-4deb97745da9/test.log]

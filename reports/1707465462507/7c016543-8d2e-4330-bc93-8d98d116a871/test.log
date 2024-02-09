@@ -1,0 +1,69 @@
+[2024-02-09 07:57:46] [1] [WARN] Reporting disabled: using no op test run registrar
+[2024-02-09 07:57:46] [1] [INFO] TEST [Surefire test - verifyGetCurrentWeatherByLocationTokyo] STARTED at [02:57:46 2024-02-09]
+[2024-02-09 07:57:46] [1] [INFO] Request method:	GET
+Request URI:	https://api.openweathermap.org/data/2.5/weather?lat=35.652832&lon=139.839478&appid=0cd24b47cec1357b9a0cc9df9f565e02
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Cookies:		<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Body:			<none>
+HTTP/1.1 200 OK
+Server: openresty
+Date: Fri, 09 Feb 2024 07:57:46 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 479
+Connection: keep-alive
+X-Cache-Key: /data/2.5/weather?lat=35.65&lon=139.84
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET, POST
+
+{
+    "coord": {
+        "lon": 139.8395,
+        "lat": 35.6528
+    },
+    "weather": [
+        {
+            "id": 803,
+            "main": "Clouds",
+            "description": "broken clouds",
+            "icon": "04d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 282.77,
+        "feels_like": 279.85,
+        "temp_min": 282.11,
+        "temp_max": 283.76,
+        "pressure": 1015,
+        "humidity": 53
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 6.17,
+        "deg": 120
+    },
+    "clouds": {
+        "all": 75
+    },
+    "dt": 1707465466,
+    "sys": {
+        "type": 1,
+        "id": 8077,
+        "country": "JP",
+        "sunrise": 1707428089,
+        "sunset": 1707466495
+    },
+    "timezone": 32400,
+    "id": 1865485,
+    "name": "Akashich?",
+    "cod": 200
+}
+
+[2024-02-09 07:57:46] [1] [INFO] TEST [Surefire test - verifyGetCurrentWeatherByLocationTokyo] PASSED at [02:57:46 2024-02-09]

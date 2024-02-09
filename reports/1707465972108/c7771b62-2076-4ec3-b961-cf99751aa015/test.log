@@ -1,0 +1,10 @@
+[2024-02-09 08:06:48] [1] [WARN] Reporting disabled: using no op test run registrar
+[2024-02-09 08:06:48] [1] [INFO] TEST [Surefire test - verifyRotatingButtonTest] STARTED at [03:06:48 2024-02-09]
+[2024-02-09 08:06:48] [1] [INFO] Starting driver session...
+[2024-02-09 08:06:49] [1] [INFO] Driver session started.
+[2024-02-09 08:06:49] [1] [INFO] INFO: opening url 'https://www.warframe.com/landing'
+[2024-02-09 08:06:51] [1] [INFO] Element 'continueToHomeButton' is clicked.
+[2024-02-09 08:06:51] [1] [INFO] INFO: opening url 'https://www.warframe.com'
+[2024-02-09 08:06:55] [1] [INFO] Element 'rotatingButton' is clicked.
+[2024-02-09 08:06:55] [1] [INFO] INFO: opening url 'https://www.warframe.com/whispers-in-the-walls'
+[2024-02-09 08:06:56] [1] [INFO] TEST [Surefire test - verifyRotatingButtonTest] PASSED at [03:06:56 2024-02-09]

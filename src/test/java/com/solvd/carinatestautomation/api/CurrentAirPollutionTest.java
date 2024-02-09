@@ -1,6 +1,5 @@
 package com.solvd.carinatestautomation.api;
 
-import com.solvd.carinatestautomation.api.GetCurrentAirPollutionByLocation;
 import com.zebrunner.carina.api.http.HttpResponseStatusType;
 import org.testng.annotations.Test;
 

@@ -1,6 +1,5 @@
 package com.solvd.carinatestautomation.api;
 
-import com.solvd.carinatestautomation.api.GetCurrentWeatherByLocation;
 import com.solvd.carinatestautomation.api.domain.CurrentWeatherResponse;
 import com.zebrunner.carina.api.http.HttpResponseStatusType;
 import io.restassured.response.Response;

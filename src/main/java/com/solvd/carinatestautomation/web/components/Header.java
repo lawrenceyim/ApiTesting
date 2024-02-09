@@ -20,6 +20,7 @@ public class Header extends AbstractUIObject {
     public Header(WebDriver driver, SearchContext searchContext) {
         super(driver, searchContext);
     }
+
     public HomePage pressHeaderNavButton() {
         headerNavButton.click();
         return new HomePage(getDriver());

@@ -1,0 +1,27 @@
+[2024-02-09 08:06:12] [1] [INFO] 
+=========== WebDriver configuration ===========
+browser=chrome
+selenium_url=http://localhost:4444/wd/hub
+-------------- Driver capabilities ------------
+===============================================
+
+[2024-02-09 08:06:12] [1] [WARN] Reporting disabled: using no op test run registrar
+[2024-02-09 08:06:13] [1] [INFO] Set thread-count=1
+[2024-02-09 08:06:13] [1] [INFO] Set data-provider-thread-count=1
+[2024-02-09 08:06:13] [1] [INFO] CARINA_CORE_VERSION: 1.2.6
+[2024-02-09 08:07:09] [1] [INFO] INFO: '**************** Test execution summary ****************'.
+[2024-02-09 08:07:09] [1] [INFO] RESULT #1: TEST [Surefire test - verifyGetCurrentAirPollutionByLocationWashingtonDc] FAIL [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707465972108/7cd4a97c-9df3-4298-a0ea-1ca750c26b8b/test.log]
+[2024-02-09 08:07:09] [1] [INFO] RESULT #2: TEST [Surefire test - verifyGetCurrentWeatherByLocationAtlanta] FAIL [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707465972108/9f7b39d4-4272-49b8-9c91-7f2a272dd6cb/test.log]
+[2024-02-09 08:07:09] [1] [INFO] RESULT #3: TEST [Surefire test - verifyGetCurrentWeatherByLocationNewYork] PASS [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707465972108/34d04476-1021-47ec-a5b9-0c303e956fb8/test.log]
+[2024-02-09 08:07:09] [1] [INFO] RESULT #4: TEST [Surefire test - verifyGetCurrentWeatherByLocationSeoul] PASS [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707465972108/c00877f4-d1a0-4383-aeee-d5b2b0d939e9/test.log]
+[2024-02-09 08:07:09] [1] [INFO] RESULT #5: TEST [Surefire test - verifyGetCurrentWeatherByLocationTokyo] PASS [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707465972108/aadd1d1d-2e57-4b73-ad7e-67a8e3830b19/test.log]
+[2024-02-09 08:07:09] [1] [INFO] RESULT #6: TEST [Surefire test - verifyGetCurrentWeatherByLocationWashingtonDc] PASS [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707465972108/9c0e563e-774a-4978-8c4d-2e1a106a2fb7/test.log]
+[2024-02-09 08:07:09] [1] [INFO] RESULT #7: TEST [Surefire test - verifyGeocodeAtlanta] PASS [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707465972108/2f9d4e65-2d3e-4127-b8a9-e4ea5e342fc6/test.log]
+[2024-02-09 08:07:09] [1] [INFO] RESULT #8: TEST [Surefire test - verifyEulaButtonTest] FAIL [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707465972108/1f7bc758-4416-4081-81ea-e8a91ad46694/test.log]
+[2024-02-09 08:07:09] [1] [INFO] RESULT #9: TEST [Surefire test - verifyLandingPageOpenTest] PASS [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707465972108/2175f9b6-7571-4f11-8185-626920fcfdd7/test.log]
+[2024-02-09 08:07:09] [1] [INFO] RESULT #10: TEST [Surefire test - verifyLandingToHomeButtonTest] PASS [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707465972108/13ad2ed0-4400-49a4-ba27-388fc0894547/test.log]
+[2024-02-09 08:07:09] [1] [INFO] RESULT #11: TEST [Surefire test - verifyNewsButtonTest] FAIL [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707465972108/d8af9d71-843e-4b13-956d-d74668b1534e/test.log]
+[2024-02-09 08:07:09] [1] [INFO] RESULT #12: TEST [Surefire test - verifyPrivacyPolicyButtonTest] FAIL [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707465972108/e751c064-03a9-4104-80c0-6bd13fe0c617/test.log]
+[2024-02-09 08:07:09] [1] [INFO] RESULT #13: TEST [Surefire test - verifyRotatingButtonTest] PASS [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707465972108/c7771b62-2076-4ec3-b961-cf99751aa015/test.log]
+[2024-02-09 08:07:09] [1] [INFO] RESULT #14: TEST [Surefire test - verifyTermsOfUseButtonTest] FAIL [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707465972108/cc50ad4c-67f1-4c49-a606-ca8e02d7e4e2/test.log]
+[2024-02-09 08:07:09] [1] [INFO] RESULT #15: TEST [Surefire test - verifyVideosButtonTest] FAIL [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707465972108/13d46287-4817-4d92-815d-8c81b952017b/test.log]
