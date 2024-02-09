@@ -1,0 +1,6 @@
+[2024-02-09 05:24:23] [1] [WARN] Reporting disabled: using no op test run registrar
+[2024-02-09 05:24:23] [1] [INFO] TEST [ApiTesting - verifyLandingPageOpenTest] STARTED at [00:24:23 2024-02-09]
+[2024-02-09 05:24:23] [1] [INFO] Starting driver session...
+[2024-02-09 05:24:24] [1] [INFO] Driver session started.
+[2024-02-09 05:24:24] [1] [INFO] INFO: opening url 'https://www.warframe.com/landing'
+[2024-02-09 05:24:26] [1] [INFO] TEST [ApiTesting - verifyLandingPageOpenTest] PASSED at [00:24:26 2024-02-09]

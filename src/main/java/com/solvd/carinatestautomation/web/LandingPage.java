@@ -12,10 +12,19 @@ public class LandingPage extends AbstractPage {
 
     public LandingPage(WebDriver driver) {
         super(driver);
-        setPageAbsoluteURL(Configuration.getRequired("home_url") + "/landing");
+        setPageAbsoluteURL(Configuration.getRequired("home_url") + Configuration.getRequired("landing_url"));
     }
 
-    public void pressGoToHomeButton() {
+    public HomePage pressGoToHomeButton() {
         continueToHomeButton.click();
+        return new HomePage(getDriver());
+    }
+
+    public ExtendedWebElement getContinueToHomeButton() {
+        return continueToHomeButton;
+    }
+
+    public void setContinueToHomeButton(ExtendedWebElement continueToHomeButton) {
+        this.continueToHomeButton = continueToHomeButton;
     }
 }
