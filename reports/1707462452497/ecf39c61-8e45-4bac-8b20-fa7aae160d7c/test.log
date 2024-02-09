@@ -1,0 +1,8 @@
+[2024-02-09 07:07:37] [1] [WARN] Reporting disabled: using no op test run registrar
+[2024-02-09 07:07:37] [1] [INFO] TEST [ApiTesting - verifyLandingToHomeButtonTest] STARTED at [02:07:37 2024-02-09]
+[2024-02-09 07:07:37] [1] [INFO] Starting driver session...
+[2024-02-09 07:07:38] [1] [INFO] Driver session started.
+[2024-02-09 07:07:38] [1] [INFO] INFO: opening url 'https://www.warframe.com/landing'
+[2024-02-09 07:07:40] [1] [INFO] Element 'continueToHomeButton' is clicked.
+[2024-02-09 07:07:40] [1] [INFO] INFO: opening url 'https://www.warframe.com'
+[2024-02-09 07:07:42] [1] [INFO] TEST [ApiTesting - verifyLandingToHomeButtonTest] PASSED at [02:07:42 2024-02-09]

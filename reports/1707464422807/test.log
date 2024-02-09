@@ -1,0 +1,23 @@
+[2024-02-09 07:40:22] [1] [INFO] 
+=========== WebDriver configuration ===========
+browser=chrome
+selenium_url=http://localhost:4444/wd/hub
+-------------- Driver capabilities ------------
+===============================================
+
+[2024-02-09 07:40:22] [1] [WARN] Reporting disabled: using no op test run registrar
+[2024-02-09 07:40:24] [1] [INFO] [TestNG] Running:
+  C:\Users\lawte\AppData\Local\JetBrains\IdeaIC2022.2\temp-testng-customsuite.xml
+
+[2024-02-09 07:40:24] [1] [INFO] Set thread-count=1
+[2024-02-09 07:40:24] [1] [INFO] Set data-provider-thread-count=1
+[2024-02-09 07:40:24] [1] [INFO] CARINA_CORE_VERSION: 1.2.6
+[2024-02-09 07:41:26] [1] [INFO] INFO: '**************** Test execution summary ****************'.
+[2024-02-09 07:41:26] [1] [INFO] RESULT #1: TEST [ApiTesting - verifyEulaButtonTest] FAIL [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707464422807/97396017-4eaa-4bef-b849-6dc1e88660dd/test.log]
+[2024-02-09 07:41:26] [1] [INFO] RESULT #2: TEST [ApiTesting - verifyLandingPageOpenTest] PASS [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707464422807/17004761-c09c-4738-98d7-db257ecd78e7/test.log]
+[2024-02-09 07:41:26] [1] [INFO] RESULT #3: TEST [ApiTesting - verifyLandingToHomeButtonTest] PASS [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707464422807/cf38d665-9744-4090-926b-3a3ab329c894/test.log]
+[2024-02-09 07:41:26] [1] [INFO] RESULT #4: TEST [ApiTesting - verifyNewsButtonTest] FAIL [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707464422807/dcf8293e-24c3-4a64-8d82-c5a370b37906/test.log]
+[2024-02-09 07:41:26] [1] [INFO] RESULT #5: TEST [ApiTesting - verifyPrivacyPolicyButtonTest] FAIL [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707464422807/2c53069c-ad1f-487d-86d6-aa9433d0264a/test.log]
+[2024-02-09 07:41:26] [1] [INFO] RESULT #6: TEST [ApiTesting - verifyRotatingButtonTest] PASS [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707464422807/95d08e91-a09c-415b-9bf1-063115d17288/test.log]
+[2024-02-09 07:41:26] [1] [INFO] RESULT #7: TEST [ApiTesting - verifyTermsOfUseButtonTest] FAIL [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707464422807/e6408b89-1ae0-43a5-be47-1ab3d91b5206/test.log]
+[2024-02-09 07:41:26] [1] [INFO] RESULT #8: TEST [ApiTesting - verifyVideosButtonTest] FAIL [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707464422807/42627b0f-9c2e-424c-b42c-60bc9d85da43/test.log]
