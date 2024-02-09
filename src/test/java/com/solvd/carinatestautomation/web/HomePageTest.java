@@ -1,8 +1,11 @@
 package com.solvd.carinatestautomation.web;
 
 import com.zebrunner.carina.core.AbstractTest;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.util.concurrent.TimeUnit;
 
 public class HomePageTest extends AbstractTest {
     /*
@@ -21,11 +24,23 @@ public class HomePageTest extends AbstractTest {
         verifyAndOpenHomePage(landingPage);
     }
 
+    // Rotating refers to the rotating events offered by Warframe
     @Test
-    public void verifyRotatingLinkButtonTest() {
+    public void verifyRotatingButtonTest() {
         LandingPage landingPage = verifyAndOpenLandingPage();
         HomePage homePage = verifyAndOpenHomePage(landingPage);
         verifyAndOpenRotatingPage(homePage);
+    }
+
+    // This test currently fails because:
+    //      com.zebrunner.carina.utils.exception.InvalidConfigurationException:
+    //      Getting the value of parameter 'url' as required failed: the value is missing.
+    // This may be caused by YouTube page displaying a different URL until the page is fully loaded
+    @Test
+    public void verifyVideosButtonTest() {
+        LandingPage landingPage = verifyAndOpenLandingPage();
+        HomePage homePage = verifyAndOpenHomePage(landingPage);
+        verifyAndOpenPlayWarframeYouTubePage(homePage);
     }
 
     // HELPER FUNCTIONS
@@ -46,9 +61,16 @@ public class HomePageTest extends AbstractTest {
     }
 
     private RotatingPage verifyAndOpenRotatingPage(HomePage homePage) {
-        RotatingPage rotatingPage = homePage.getHeaderComponent().pressRotatingLinkButton();
+        RotatingPage rotatingPage = homePage.getHeaderComponent().pressRotatingButton();
         rotatingPage.open();
         Assert.assertTrue(rotatingPage.isPageOpened());
         return rotatingPage;
+    }
+
+    private PlayWarframeYouTubePage verifyAndOpenPlayWarframeYouTubePage(HomePage homePage) {
+        PlayWarframeYouTubePage playWarframeYouTubePage = homePage.getHeaderComponent().pressVideosButton();
+        playWarframeYouTubePage.open();
+        Assert.assertTrue(playWarframeYouTubePage.isPageOpened(5));
+        return playWarframeYouTubePage;
     }
 }

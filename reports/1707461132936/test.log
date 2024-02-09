@@ -1,0 +1,19 @@
+[2024-02-09 06:45:32] [1] [INFO] 
+=========== WebDriver configuration ===========
+browser=chrome
+selenium_url=http://localhost:4444/wd/hub
+-------------- Driver capabilities ------------
+===============================================
+
+[2024-02-09 06:45:32] [1] [WARN] Reporting disabled: using no op test run registrar
+[2024-02-09 06:45:34] [1] [INFO] [TestNG] Running:
+  C:\Users\lawte\AppData\Local\JetBrains\IdeaIC2022.2\temp-testng-customsuite.xml
+
+[2024-02-09 06:45:34] [1] [INFO] Set thread-count=1
+[2024-02-09 06:45:34] [1] [INFO] Set data-provider-thread-count=1
+[2024-02-09 06:45:34] [1] [INFO] CARINA_CORE_VERSION: 1.2.6
+[2024-02-09 06:45:55] [1] [INFO] INFO: '**************** Test execution summary ****************'.
+[2024-02-09 06:45:55] [1] [INFO] RESULT #1: TEST [ApiTesting - verifyLandingPageOpenTest] PASS [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707461132936/f0cd09b9-bbbc-4d7f-806d-78909341d1f9/test.log]
+[2024-02-09 06:45:55] [1] [INFO] RESULT #2: TEST [ApiTesting - verifyLandingToHomeButtonTest] PASS [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707461132936/26a01258-c469-4e3d-9ff2-706228d36066/test.log]
+[2024-02-09 06:45:55] [1] [INFO] RESULT #3: TEST [ApiTesting - verifyRotatingButtonTest] PASS [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707461132936/39561651-cdee-4703-a2e9-6de558a64b75/test.log]
+[2024-02-09 06:45:55] [1] [INFO] RESULT #4: TEST [ApiTesting - verifyVideosButtonTest] FAIL [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707461132936/8d86f3ee-f70c-40cc-a7e4-fac7fd8f9c8f/test.log]
