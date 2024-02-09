@@ -21,16 +21,7 @@ public class HomePage extends AbstractPage {
     public Header getHeader() {
         return header;
     }
-
-    public void setHeader(Header header) {
-        this.header = header;
-    }
-
     public Footer getFooter() {
         return footer;
-    }
-
-    public void setFooter(Footer footer) {
-        this.footer = footer;
     }
 }

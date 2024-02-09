@@ -35,28 +35,4 @@ public class Header extends AbstractUIObject {
         videosButton.click();
         return new PlayWarframeYouTubePage(getDriver());
     }
-
-    public ExtendedWebElement getHeaderNavButton() {
-        return headerNavButton;
-    }
-
-    public void setHeaderNavButton(ExtendedWebElement headerNavButton) {
-        this.headerNavButton = headerNavButton;
-    }
-
-    public ExtendedWebElement getRotatingButton() {
-        return rotatingButton;
-    }
-
-    public void setRotatingButton(ExtendedWebElement rotatingButton) {
-        this.rotatingButton = rotatingButton;
-    }
-
-    public ExtendedWebElement getVideosButton() {
-        return videosButton;
-    }
-
-    public void setVideosButton(ExtendedWebElement videosButton) {
-        this.videosButton = videosButton;
-    }
 }
