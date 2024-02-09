@@ -10,11 +10,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
 public class Header extends AbstractUIObject {
-    @FindBy(xpath = "/header/div[1]/div[1]/div/div/div[1]/a")
+    @FindBy(xpath = "/html/body/div[1]/div[1]/div/div/div[1]/a")
     private ExtendedWebElement headerNavButton;
-    @FindBy(xpath = "/header/div[1]/div[1]/div/div/div[2]/div/div[1]/a")
+    @FindBy(xpath = "/html/body/div[1]/div[1]/div/div/div[2]/div/div[1]/a")
     private ExtendedWebElement rotatingButton;
-    @FindBy(xpath = "/header/div[1]/div[1]/div/div/div[2]/div/div[6]")
+    @FindBy(xpath = "/html/body/div[1]/div[1]/div/div/div[2]/div/div[6]")
     private ExtendedWebElement videosButton;
 
     public Header(WebDriver driver, SearchContext searchContext) {

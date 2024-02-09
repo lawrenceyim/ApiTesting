@@ -1,0 +1,16 @@
+[2024-02-09 04:42:24] [1] [INFO] 
+=========== WebDriver configuration ===========
+browser=chrome
+selenium_url=http://localhost:4444/wd/hub
+-------------- Driver capabilities ------------
+===============================================
+
+[2024-02-09 04:42:25] [1] [WARN] Reporting disabled: using no op test run registrar
+[2024-02-09 04:42:26] [1] [INFO] [TestNG] Running:
+  C:\Users\lawte\AppData\Local\JetBrains\IdeaIC2022.2\temp-testng-customsuite.xml
+
+[2024-02-09 04:42:26] [1] [INFO] Set thread-count=1
+[2024-02-09 04:42:26] [1] [INFO] Set data-provider-thread-count=1
+[2024-02-09 04:42:26] [1] [INFO] CARINA_CORE_VERSION: 1.2.6
+[2024-02-09 04:42:34] [1] [INFO] INFO: '**************** Test execution summary ****************'.
+[2024-02-09 04:42:34] [1] [INFO] RESULT #1: TEST [ApiTesting - verifyVideosButtonTest] FAIL [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707496944973/14b4e299-4e27-426a-9e99-0c1738f48bbf/test.log]
