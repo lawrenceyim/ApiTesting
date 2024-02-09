@@ -3,6 +3,7 @@ package com.solvd.carinatestautomation.web;
 import com.zebrunner.carina.core.AbstractTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 public class HomePageTest extends AbstractTest {
     /*
@@ -81,8 +82,10 @@ public class HomePageTest extends AbstractTest {
         HomePage homePage = landingPage.pressGoToHomeButton();
         homePage.open();
         Assert.assertTrue(homePage.isPageOpened());
-        Assert.assertTrue(homePage.getHeader().isUIObjectPresent(1));
-        Assert.assertTrue(homePage.getFooter().isUIObjectPresent(1));
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertTrue(homePage.getHeader().isUIObjectPresent(1));
+        softAssert.assertTrue(homePage.getFooter().isUIObjectPresent(1));
+        softAssert.assertAll();
         return homePage;
     }
 

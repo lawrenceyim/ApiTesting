@@ -1,0 +1,16 @@
+[2024-02-09 04:14:06] [1] [INFO] 
+=========== WebDriver configuration ===========
+browser=chrome
+selenium_url=http://localhost:4444/wd/hub
+-------------- Driver capabilities ------------
+===============================================
+
+[2024-02-09 04:14:06] [1] [WARN] Reporting disabled: using no op test run registrar
+[2024-02-09 04:14:07] [1] [INFO] [TestNG] Running:
+  C:\Users\lawte\AppData\Local\JetBrains\IdeaIC2022.2\temp-testng-customsuite.xml
+
+[2024-02-09 04:14:07] [1] [INFO] Set thread-count=1
+[2024-02-09 04:14:07] [1] [INFO] Set data-provider-thread-count=1
+[2024-02-09 04:14:07] [1] [INFO] CARINA_CORE_VERSION: 1.2.6
+[2024-02-09 04:14:15] [1] [INFO] INFO: '**************** Test execution summary ****************'.
+[2024-02-09 04:14:15] [1] [INFO] RESULT #1: TEST [ApiTesting - verifyEulaButtonTest] FAIL [log=file://C:\Users\lawte\Documents\ApiTesting\reports\1707495246152/49ebbda4-e3b2-47e5-bf2d-2cd1d556d98b/test.log]

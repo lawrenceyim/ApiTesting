@@ -1,0 +1,5 @@
+[2024-02-09 04:22:42] [1] [WARN] Reporting disabled: using no op test run registrar
+[2024-02-09 04:22:42] [1] [INFO] TEST [ApiTesting - verifyEulaButtonTest] STARTED at [11:22:42 2024-02-09]
+[2024-02-09 04:22:42] [1] [INFO] Starting driver session...
+[2024-02-09 04:22:44] [1] [INFO] Driver session started.
+[2024-02-09 04:22:44] [1] [INFO] INFO: opening url 'https://www.warframe.com/landing'
