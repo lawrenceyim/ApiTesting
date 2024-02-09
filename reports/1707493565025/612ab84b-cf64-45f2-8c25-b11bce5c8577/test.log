@@ -1,19 +1,19 @@
-[2024-02-09 07:44:45] [1] [WARN] Reporting disabled: using no op test run registrar
-[2024-02-09 07:44:45] [1] [INFO] TEST [ApiTesting - verifyPrivacyPolicyButtonTest] STARTED at [02:44:45 2024-02-09]
-[2024-02-09 07:44:45] [1] [INFO] Starting driver session...
-[2024-02-09 07:44:46] [1] [INFO] Driver session started.
-[2024-02-09 07:44:46] [1] [INFO] INFO: opening url 'https://www.warframe.com/landing'
-[2024-02-09 07:44:48] [1] [INFO] Element 'continueToHomeButton' is clicked.
-[2024-02-09 07:44:48] [1] [INFO] INFO: opening url 'https://www.warframe.com'
-[2024-02-09 07:44:52] [1] [ERROR] TEST [ApiTesting - verifyPrivacyPolicyButtonTest] FAILED at [02:44:52 2024-02-09] - element click intercepted: Element <a class="FooterNavigationLink" id="lnkFooterPrivPolicy" href="https://www.warframe.com/privacy">...</a> is not clickable at point (1321, 907). Other element would receive the click: <a class="HomeNewsTile" href="https://www.warframe.com/news/devstream-176-overview" style="background-image: url(https://www-static.warframe.com/uploads/thumbnails/77c79f9a620e4478a5c056dcc46f902_1280x720.png);">...</a>
+[2024-02-09 03:46:23] [1] [WARN] Reporting disabled: using no op test run registrar
+[2024-02-09 03:46:23] [1] [INFO] TEST [ApiTesting - verifyNewsButtonTest] STARTED at [10:46:23 2024-02-09]
+[2024-02-09 03:46:23] [1] [INFO] Starting driver session...
+[2024-02-09 03:46:24] [1] [INFO] Driver session started.
+[2024-02-09 03:46:24] [1] [INFO] INFO: opening url 'https://www.warframe.com/landing'
+[2024-02-09 03:46:27] [1] [INFO] Element 'continueToHomeButton' is clicked.
+[2024-02-09 03:46:27] [1] [INFO] INFO: opening url 'https://www.warframe.com'
+[2024-02-09 03:46:30] [1] [ERROR] TEST [ApiTesting - verifyNewsButtonTest] FAILED at [10:46:30 2024-02-09] - element click intercepted: Element <a class="FooterNavigationLink" id="lnkFooter..." href="https://www.digitalextremes.com">Press</a> is not clickable at point (357, 870). Other element would receive the click: <a class="HomeNewsTile" href="https://www.warframe.com/news/devstream-176-overview" style="background-image: url(https://www-static.warframe.com/uploads/thumbnails/77c79f9a620e4478a5c056dcc46f902_1280x720.png);">...</a>
   (Session info: chrome=121.0.6167.141)
 Build info: version: '4.13.0', revision: 'ba948ece5b*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.19'
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [45d831731a390c8f6d7987c4608d0605, clickElement {id=F73385F05D966EF97655A7F1EFA4BA9C_element_120}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 121.0.6167.141, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\lawte\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53767}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.56.1:4444/sess..., se:cdpVersion: 121.0.6167.141, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[[[RemoteWebDriver: chrome on Windows 10 (45d831731a390c8f6d7987c4608d0605)] -> id: footer]] -> xpath: /html/body/div[2]/div[1]/div/div[2]/div/a[4]]
-Session ID: 45d831731a390c8f6d7987c4608d0605
+Command: [8d1896dd1c381484a1d34f7e532196da, clickElement {id=D5FED305163F086AA7B5F9343E333495_element_123}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 121.0.6167.141, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\lawte\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49296}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.56.1:4444/sess..., se:cdpVersion: 121.0.6167.141, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[[[RemoteWebDriver: chrome on Windows 10 (8d1896dd1c381484a1d34f7e532196da)] -> id: footer]] -> xpath: /html/body/div[2]/div[1]/div/div[2]/div/a[2]]
+Session ID: 8d1896dd1c381484a1d34f7e532196da
 
 java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -34,7 +34,7 @@ java.base/java.lang.reflect.Method.invoke(Method.java:566)
 org.openqa.selenium.support.decorators.WebDriverDecorator.call(WebDriverDecorator.java:249)
 org.openqa.selenium.support.decorators.DefaultDecorated.call(DefaultDecorated.java:48)
 org.openqa.selenium.support.decorators.WebDriverDecorator.lambda$createProxy$2(WebDriverDecorator.java:321)
-net.bytebuddy.renamed.java.lang.Object$ByteBuddy$M8zL3huL.click(Unknown Source)
+net.bytebuddy.renamed.java.lang.Object$ByteBuddy$cieM2V1W.click(Unknown Source)
 com.zebrunner.carina.webdriver.decorator.ExtendedWebElement$3.doClick(ExtendedWebElement.java:1491)
 com.zebrunner.carina.webdriver.decorator.ExtendedWebElement.executeAction(ExtendedWebElement.java:1351)
 com.zebrunner.carina.webdriver.decorator.ExtendedWebElement.overrideAction(ExtendedWebElement.java:1485)
@@ -43,9 +43,9 @@ com.zebrunner.carina.webdriver.decorator.ExtendedWebElement.doAction(ExtendedWeb
 com.zebrunner.carina.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:743)
 com.zebrunner.carina.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:723)
 com.zebrunner.carina.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:705)
-com.solvd.carinatestautomation.web.components.Footer.pressPrivacyPolicyButton(Footer.java:42)
-com.solvd.carinatestautomation.web.HomePageTest.openAndVerifyPrivacyPolicyPage(HomePageTest.java:118)
-com.solvd.carinatestautomation.web.HomePageTest.verifyPrivacyPolicyButtonTest(HomePageTest.java:61)
+com.solvd.carinatestautomation.web.components.Footer.pressNewsButton(Footer.java:32)
+com.solvd.carinatestautomation.web.HomePageTest.openAndVerifyDigitalExtremesPage(HomePageTest.java:104)
+com.solvd.carinatestautomation.web.HomePageTest.verifyNewsButtonTest(HomePageTest.java:47)
 java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

@@ -1,19 +1,19 @@
-[2024-02-09 07:44:19] [1] [WARN] Reporting disabled: using no op test run registrar
-[2024-02-09 07:44:19] [1] [INFO] TEST [ApiTesting - verifyEulaButtonTest] STARTED at [02:44:19 2024-02-09]
-[2024-02-09 07:44:19] [1] [INFO] Starting driver session...
-[2024-02-09 07:44:21] [1] [INFO] Driver session started.
-[2024-02-09 07:44:21] [1] [INFO] INFO: opening url 'https://www.warframe.com/landing'
-[2024-02-09 07:44:24] [1] [INFO] Element 'continueToHomeButton' is clicked.
-[2024-02-09 07:44:24] [1] [INFO] INFO: opening url 'https://www.warframe.com'
-[2024-02-09 07:44:29] [1] [ERROR] TEST [ApiTesting - verifyEulaButtonTest] FAILED at [02:44:29 2024-02-09] - element click intercepted: Element <a class="FooterNavigationLink" id="lnkFooter..." href="https://www.warframe.com/eula">EULA</a> is not clickable at point (1462, 907). Other element would receive the click: <a class="HomeNewsTile" href="https://www.warframe.com/news/devstream-176-overview" style="background-image: url(https://www-static.warframe.com/uploads/thumbnails/77c79f9a620e4478a5c056dcc46f902_1280x720.png);">...</a>
+[2024-02-09 03:46:06] [1] [WARN] Reporting disabled: using no op test run registrar
+[2024-02-09 03:46:06] [1] [INFO] TEST [ApiTesting - verifyEulaButtonTest] STARTED at [10:46:06 2024-02-09]
+[2024-02-09 03:46:06] [1] [INFO] Starting driver session...
+[2024-02-09 03:46:08] [1] [INFO] Driver session started.
+[2024-02-09 03:46:09] [1] [INFO] INFO: opening url 'https://www.warframe.com/landing'
+[2024-02-09 03:46:11] [1] [INFO] Element 'continueToHomeButton' is clicked.
+[2024-02-09 03:46:11] [1] [INFO] INFO: opening url 'https://www.warframe.com'
+[2024-02-09 03:46:15] [1] [ERROR] TEST [ApiTesting - verifyEulaButtonTest] FAILED at [10:46:15 2024-02-09] - element click intercepted: Element <a class="FooterNavigationLink" id="lnkFooter..." href="https://www.warframe.com/eula">EULA</a> is not clickable at point (806, 870). Other element would receive the click: <a class="HomeNewsTile" href="https://www.warframe.com/news/devstream-176-overview" style="background-image: url(https://www-static.warframe.com/uploads/thumbnails/77c79f9a620e4478a5c056dcc46f902_1280x720.png);">...</a>
   (Session info: chrome=121.0.6167.141)
 Build info: version: '4.13.0', revision: 'ba948ece5b*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.19'
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [6fd285e2c61618828b31de05d4217896, clickElement {id=27E0BF1904BD615B43E813FE8DFDD446_element_120}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 121.0.6167.141, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\lawte\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53462}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.56.1:4444/sess..., se:cdpVersion: 121.0.6167.141, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[[[RemoteWebDriver: chrome on Windows 10 (6fd285e2c61618828b31de05d4217896)] -> id: footer]] -> xpath: /html/body/div[2]/div[1]/div/div[2]/div/a[5]]
-Session ID: 6fd285e2c61618828b31de05d4217896
+Command: [1038f62adaa798c8d010e68f5d6c7197, clickElement {id=5AD5299CDA33A1BFC0541A7233E95958_element_121}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 121.0.6167.141, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\lawte\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65453}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.56.1:4444/sess..., se:cdpVersion: 121.0.6167.141, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[[[RemoteWebDriver: chrome on Windows 10 (1038f62adaa798c8d010e68f5d6c7197)] -> id: footer]] -> xpath: /html/body/div[2]/div[1]/div/div[2]/div/a[5]]
+Session ID: 1038f62adaa798c8d010e68f5d6c7197
 
 java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -34,7 +34,7 @@ java.base/java.lang.reflect.Method.invoke(Method.java:566)
 org.openqa.selenium.support.decorators.WebDriverDecorator.call(WebDriverDecorator.java:249)
 org.openqa.selenium.support.decorators.DefaultDecorated.call(DefaultDecorated.java:48)
 org.openqa.selenium.support.decorators.WebDriverDecorator.lambda$createProxy$2(WebDriverDecorator.java:321)
-net.bytebuddy.renamed.java.lang.Object$ByteBuddy$NbNmamkx.click(Unknown Source)
+net.bytebuddy.renamed.java.lang.Object$ByteBuddy$1YMP6G7r.click(Unknown Source)
 com.zebrunner.carina.webdriver.decorator.ExtendedWebElement$3.doClick(ExtendedWebElement.java:1491)
 com.zebrunner.carina.webdriver.decorator.ExtendedWebElement.executeAction(ExtendedWebElement.java:1351)
 com.zebrunner.carina.webdriver.decorator.ExtendedWebElement.overrideAction(ExtendedWebElement.java:1485)
