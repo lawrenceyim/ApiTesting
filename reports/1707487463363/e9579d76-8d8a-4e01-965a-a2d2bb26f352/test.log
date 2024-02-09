@@ -1,0 +1,69 @@
+[2024-02-09 02:04:26] [1] [WARN] Reporting disabled: using no op test run registrar
+[2024-02-09 02:04:26] [1] [INFO] TEST [Surefire test - verifyGetCurrentWeatherByLocationAtlanta] STARTED at [09:04:26 2024-02-09]
+[2024-02-09 02:04:26] [1] [INFO] Request method:	GET
+Request URI:	https://api.openweathermap.org/data/2.5/weather?lat=33.753746&lon=-84.38633&appid=0cd24b47cec1357b9a0cc9df9f565e02
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Cookies:		<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Body:			<none>
+HTTP/1.1 200 OK
+Server: openresty
+Date: Fri, 09 Feb 2024 14:04:25 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 476
+Connection: keep-alive
+X-Cache-Key: /data/2.5/weather?lat=33.75&lon=-84.39
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET, POST
+
+{
+    "coord": {
+        "lon": -84.388,
+        "lat": 33.749
+    },
+    "weather": [
+        {
+            "id": 803,
+            "main": "Clouds",
+            "description": "broken clouds",
+            "icon": "04d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 280.91,
+        "feels_like": 280.2,
+        "temp_min": 279.75,
+        "temp_max": 282.12,
+        "pressure": 1022,
+        "humidity": 69
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 1.54,
+        "deg": 40
+    },
+    "clouds": {
+        "all": 75
+    },
+    "dt": 1707486784,
+    "sys": {
+        "type": 2,
+        "id": 2006620,
+        "country": "US",
+        "sunrise": 1707481693,
+        "sunset": 1707520523
+    },
+    "timezone": -18000,
+    "id": 4180439,
+    "name": "Atlanta",
+    "cod": 200
+}
+
+[2024-02-09 02:04:26] [1] [INFO] TEST [Surefire test - verifyGetCurrentWeatherByLocationAtlanta] PASSED at [09:04:26 2024-02-09]

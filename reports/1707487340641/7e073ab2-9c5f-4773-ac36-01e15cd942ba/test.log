@@ -1,0 +1,33 @@
+[2024-02-09 02:02:25] [1] [WARN] Reporting disabled: using no op test run registrar
+[2024-02-09 02:02:25] [1] [INFO] TEST [Surefire test - verifyGeocodeAtlanta] STARTED at [09:02:25 2024-02-09]
+[2024-02-09 02:02:25] [1] [INFO] Request method:	GET
+Request URI:	https://api.openweathermap.org/geo/1.0/zip?zip=30309%2CUS&appid=0cd24b47cec1357b9a0cc9df9f565e02
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Cookies:		<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Body:			<none>
+HTTP/1.1 200 OK
+Server: openresty
+Date: Fri, 09 Feb 2024 14:02:24 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 76
+Connection: keep-alive
+X-Cache-Key: /geo/1.0/zip?zip=30309%2cus
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET, POST
+
+{
+    "zip": "30309",
+    "name": "Atlanta",
+    "lat": 33.7984,
+    "lon": -84.3883,
+    "country": "US"
+}
+
+[2024-02-09 02:02:25] [1] [INFO] TEST [Surefire test - verifyGeocodeAtlanta] PASSED at [09:02:25 2024-02-09]

@@ -1,0 +1,12 @@
+[2024-02-09 02:03:36] [1] [INFO] 
+=========== WebDriver configuration ===========
+browser=chrome
+selenium_url=http://localhost:4444/wd/hub
+-------------- Driver capabilities ------------
+===============================================
+
+[2024-02-09 02:03:36] [1] [WARN] Reporting disabled: using no op test run registrar
+[2024-02-09 02:03:38] [1] [INFO] Set thread-count=1
+[2024-02-09 02:03:38] [1] [INFO] Set data-provider-thread-count=1
+[2024-02-09 02:03:38] [1] [INFO] CARINA_CORE_VERSION: 1.2.6
+[2024-02-09 02:03:45] [19] [WARN] Trying to quit driver 'default' on shutdown hook action!

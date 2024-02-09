@@ -1,0 +1,69 @@
+[2024-02-09 01:54:48] [1] [WARN] Reporting disabled: using no op test run registrar
+[2024-02-09 01:54:48] [1] [INFO] TEST [Surefire test - verifyGetCurrentWeatherByLocationNewYork] STARTED at [08:54:48 2024-02-09]
+[2024-02-09 01:54:48] [1] [INFO] Request method:	GET
+Request URI:	https://api.openweathermap.org/data/2.5/weather?lat=40.7128&lon=-74.006&appid=0cd24b47cec1357b9a0cc9df9f565e02
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Cookies:		<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Body:			<none>
+HTTP/1.1 200 OK
+Server: openresty
+Date: Fri, 09 Feb 2024 13:54:47 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 471
+Connection: keep-alive
+X-Cache-Key: /data/2.5/weather?lat=40.71&lon=-74.01
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET, POST
+
+{
+    "coord": {
+        "lon": -74.006,
+        "lat": 40.7128
+    },
+    "weather": [
+        {
+            "id": 800,
+            "main": "Clear",
+            "description": "clear sky",
+            "icon": "01d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 279.22,
+        "feels_like": 275.76,
+        "temp_min": 276.79,
+        "temp_max": 280.45,
+        "pressure": 1022,
+        "humidity": 81
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 5.14,
+        "deg": 170
+    },
+    "clouds": {
+        "all": 0
+    },
+    "dt": 1707486779,
+    "sys": {
+        "type": 1,
+        "id": 4610,
+        "country": "US",
+        "sunrise": 1707479889,
+        "sunset": 1707517344
+    },
+    "timezone": -18000,
+    "id": 5128581,
+    "name": "New York",
+    "cod": 200
+}
+
+[2024-02-09 01:54:48] [1] [INFO] TEST [Surefire test - verifyGetCurrentWeatherByLocationNewYork] PASSED at [08:54:48 2024-02-09]
