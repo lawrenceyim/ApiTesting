@@ -1,15 +1,27 @@
 package com.solvd.carinatestautomation.web;
 
-import org.openqa.selenium.WebDriver;
+import com.zebrunner.carina.core.AbstractTest;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
-import static com.zebrunner.agent.core.webdriver.RemoteWebDriverFactory.getDriver;
-
-public class HomePageTest {
+public class HomePageTest extends AbstractTest {
     @Test
-    public void verifyHeaderNavButtonTest() {
-        WebDriver webDriver = getDriver();
-        HomePage homePage = new HomePage(webDriver);
-        homePage.pressHeaderNavButton();
+    public void verifyLandingPageOpenTest() {
+        LandingPage landingPage = new LandingPage(getDriver());
+        landingPage.open();
+    }
+    @Test
+    public void verifyGoToHomeTest() {
+        LandingPage landingPage = new LandingPage(getDriver());
+        landingPage.open();
+        landingPage.pressGoToHomeButton();
+    }
+
+    @Test
+    public void verifyRotatingLinkButtonTest() {
+        LandingPage landingPage = new LandingPage(getDriver());
+        landingPage.open();
+        landingPage.pressGoToHomeButton();
+
     }
 }

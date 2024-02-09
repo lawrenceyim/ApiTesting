@@ -7,8 +7,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends AbstractPage {
-    @FindBy(css = ".HeaderNavigationBar-logoLink")
+    @FindBy(xpath = "/html/body/div[1]/div[1]/div/div/div[1]/a")
     private ExtendedWebElement headerNavButton;
+
+    @FindBy(xpath = "/html/body/div[1]/div[1]/div/div/div[2]/div/div[1]/a")
+    private ExtendedWebElement rotatingLinkButton;
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -17,5 +20,8 @@ public class HomePage extends AbstractPage {
 
     public void pressHeaderNavButton() {
         headerNavButton.click();
+    }
+    public void pressRotatingLinkButton() {
+        rotatingLinkButton.click();
     }
 }
