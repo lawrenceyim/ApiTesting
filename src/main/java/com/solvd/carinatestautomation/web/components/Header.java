@@ -10,11 +10,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
 public class Header extends AbstractUIObject {
-    @FindBy(xpath = "/html/body/div[1]/div[1]/div/div/div[1]/a")
+    @FindBy(xpath = "//div[@id='header']//a[contains(@href, 'https://www.warframe.com')]")
     private ExtendedWebElement headerNavButton;
-    @FindBy(xpath = "/html/body/div[1]/div[1]/div/div/div[2]/div/div[1]/a")
+    @FindBy(xpath = "//div[@id='header']//div[@class='HeaderMenuItem is-highlighted']")
     private ExtendedWebElement rotatingButton;
-    @FindBy(xpath = "/html/body/div[1]/div[1]/div/div/div[2]/div/div[6]")
+    @FindBy(xpath = "//div[@id='header']/div[@class='HeaderNavigationBar is-desktop']//div[@class='HeaderDesktopMenu']/div[@class='HeaderMenuItem HeaderMenuItem--external']/a")
     private ExtendedWebElement videosButton;
 
     public Header(WebDriver driver, SearchContext searchContext) {

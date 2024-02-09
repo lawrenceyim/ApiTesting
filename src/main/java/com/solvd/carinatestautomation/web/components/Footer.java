@@ -11,17 +11,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
 public class Footer extends AbstractUIObject {
-    @FindBy(xpath = "/html/body/div[2]/div[1]/div/div[2]/div/a[1]")
+    @FindBy(xpath = "//div[@id='footer']//a[contains(@href, 'https://www.warframe.com/zendesk')]")
     private ExtendedWebElement supportButton;
-    @FindBy(xpath = "/html/body/div[2]/div[1]/div/div[2]/div/a[2]")
+    @FindBy(xpath = "//div[@id='footer']//a[contains(@href, 'https://www.digitalextremes.com')]")
     private ExtendedWebElement newsButton;
-    @FindBy(xpath = "/html/body/div[2]/div[1]/div/div[2]/div/a[3]")
+    @FindBy(xpath = "//div[@id='footer']//a[contains(@href, 'https://www.warframe.com/terms')]")
     private ExtendedWebElement termsOfUseButton;
-    @FindBy(xpath = "/html/body/div[2]/div[1]/div/div[2]/div/a[4]")
+    @FindBy(xpath = "//div[@id='footer']//a[contains(@href, 'https://www.warframe.com/privacy')]")
     private ExtendedWebElement privacyPolicyButton;
-    @FindBy(xpath = "/html/body/div[2]/div[1]/div/div[2]/div/a[5]")
+    @FindBy(xpath = "//div[@id='footer']//a[contains(@href, 'https://www.warframe.com/eula')]")
     private ExtendedWebElement eulaButton;
-    @FindBy(xpath = "/html/body/div[2]/div[1]/div/div[2]/div/a[6]")
+    @FindBy(xpath = "//div[@id='footer']//div[@id='ot-sdk-btn']")
     private ExtendedWebElement cookiesSettingsButton;
 
     public Footer(WebDriver driver, SearchContext searchContext) {

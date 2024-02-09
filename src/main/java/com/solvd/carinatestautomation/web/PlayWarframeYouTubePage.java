@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 public class PlayWarframeYouTubePage extends AbstractPage {
     public PlayWarframeYouTubePage(WebDriver driver) {
         super(driver);
-        setPageAbsoluteURL(Configuration.getRequired("youtube_url") +
-                Configuration.getRequired("play_warframe_url"));
+        setPageAbsoluteURL("youtube.com/user/playwarframe");
     }
 }
