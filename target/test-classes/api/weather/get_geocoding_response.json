@@ -1,7 +1,0 @@
-{
-  "zip": "${geocode.zipCode}",
-  "name": "${geocode.name}",
-  "lat": "type:Double",
-  "lon": "type:Double",
-  "country": "${geocode.countryCode}"
-}
