@@ -16,8 +16,9 @@ public class HomePageTest extends AbstractTest {
     public void verifyLandingPageOpenTest() {
         LandingPage landingPage = new LandingPage(getDriver());
         landingPage.open();
-        Assert.assertTrue(landingPage.isPageOpened());
-        Assert.assertTrue(landingPage.getContinueToHomeButton().isPresent());
+        Assert.assertTrue(landingPage.isPageOpened(), "Landing page did not open.");
+        Assert.assertTrue(landingPage.getContinueToHomeButton().isPresent(),
+                "Landing page did not have a button to go to the home page.");
     }
 
     @Test
@@ -26,10 +27,12 @@ public class HomePageTest extends AbstractTest {
         landingPage.open();
         HomePage homePage = landingPage.pressGoToHomeButton();
         homePage.open();
-        Assert.assertTrue(homePage.isPageOpened(1));
+        Assert.assertTrue(homePage.isPageOpened(1), "The home page did not open.");
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(homePage.getHeader().isUIObjectPresent(1));
-        softAssert.assertTrue(homePage.getFooter().isUIObjectPresent(1));
+        softAssert.assertTrue(homePage.getHeader().isUIObjectPresent(1),
+                "The home page did not have a header component.");
+        softAssert.assertTrue(homePage.getFooter().isUIObjectPresent(1),
+                "The home page did not have a footer component.");
         softAssert.assertAll();
     }
 
@@ -42,7 +45,8 @@ public class HomePageTest extends AbstractTest {
         homePage.open();
         RotatingPage rotatingPage = homePage.getHeader().pressRotatingButton();
         rotatingPage.open();
-        Assert.assertTrue(rotatingPage.isPageOpened(1));
+        Assert.assertTrue(rotatingPage.isPageOpened(1),
+                "The rotating page did not open.");
     }
 
     // This test currently fails because:
@@ -57,7 +61,8 @@ public class HomePageTest extends AbstractTest {
         homePage.open();
         PlayWarframeYouTubePage playWarframeYouTubePage = homePage.getHeader().pressVideosButton();
         playWarframeYouTubePage.open();
-        Assert.assertTrue(playWarframeYouTubePage.isPageOpened(1));
+        Assert.assertTrue(playWarframeYouTubePage.isPageOpened(1),
+                "The Play Warframe YouTube page did not open.");
     }
 
     @Test
@@ -68,7 +73,8 @@ public class HomePageTest extends AbstractTest {
         homePage.open();
         DigitalExtremesPage digitalExtremesPage = homePage.getFooter().pressNewsButton();
         digitalExtremesPage.open();
-        Assert.assertTrue(digitalExtremesPage.isPageOpened(1));
+        Assert.assertTrue(digitalExtremesPage.isPageOpened(1),
+                "The Digital Extremes company page did not open.");
     }
 
     @Test
@@ -79,7 +85,8 @@ public class HomePageTest extends AbstractTest {
         homePage.open();
         TermsOfUsePage termsOfUsePage = homePage.getFooter().pressTermsOfUseButton();
         termsOfUsePage.open();
-        Assert.assertTrue(termsOfUsePage.isPageOpened(1));
+        Assert.assertTrue(termsOfUsePage.isPageOpened(1),
+                "The Terms of Use page did not open.");
     }
 
     @Test
@@ -90,7 +97,8 @@ public class HomePageTest extends AbstractTest {
         homePage.open();
         PrivacyPolicyPage privacyPolicyPage = homePage.getFooter().pressPrivacyPolicyButton();
         privacyPolicyPage.open();
-        Assert.assertTrue(privacyPolicyPage.isPageOpened(1));
+        Assert.assertTrue(privacyPolicyPage.isPageOpened(1),
+                "The Privacy Policy page did not open.");
     }
 
     @Test
@@ -101,6 +109,7 @@ public class HomePageTest extends AbstractTest {
         homePage.open();
         EndUserLicenseAgreementPage endUserLicenseAgreementPage = homePage.getFooter().pressEulaButton();
         endUserLicenseAgreementPage.open();
-        Assert.assertTrue(endUserLicenseAgreementPage.isPageOpened(1));
+        Assert.assertTrue(endUserLicenseAgreementPage.isPageOpened(1),
+                "The End User License Agreement page did not open.");
     }
 }
