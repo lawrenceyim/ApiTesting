@@ -28,23 +28,51 @@ public class Footer extends AbstractUIObject {
         super(driver, searchContext);
     }
 
+    public boolean verifySupportButtonIsPresent() {
+        return supportButton.isPresent(1);
+    }
+
+    public boolean verifyNewsButtonIsPresent() {
+        return newsButton.isPresent(1);
+    }
+
+    public boolean verifyTermsOfUseButtonIsPresent() {
+        return termsOfUseButton.isPresent(1);
+    }
+
+    public boolean verifyPrivacyPolicyButtonIsPresent() {
+        return privacyPolicyButton.isPresent(1);
+    }
+
+    public boolean verifyEulaButtonIsPresent() {
+        return eulaButton.isPresent(1);
+    }
+
+    public boolean verifyCookiesSettingButtonIsPresent() {
+        return cookiesSettingsButton.isPresent(1);
+    }
+
     public DigitalExtremesPage pressNewsButton() {
-        newsButton.click();
+        newsButton.scrollTo();
+        newsButton.clickIfPresent(1);
         return new DigitalExtremesPage(getDriver());
     }
 
     public TermsOfUsePage pressTermsOfUseButton() {
-        termsOfUseButton.click();
+        termsOfUseButton.scrollTo();
+        termsOfUseButton.clickIfPresent(1);
         return new TermsOfUsePage(getDriver());
     }
 
     public PrivacyPolicyPage pressPrivacyPolicyButton() {
-        privacyPolicyButton.click();
+        privacyPolicyButton.scrollTo();
+        privacyPolicyButton.clickIfPresent(1);
         return new PrivacyPolicyPage(getDriver());
     }
 
     public EndUserLicenseAgreementPage pressEulaButton() {
-        eulaButton.click();
+        eulaButton.scrollTo();
+        eulaButton.clickIfPresent(1);
         return new EndUserLicenseAgreementPage(getDriver());
     }
 }

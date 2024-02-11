@@ -1,6 +1,5 @@
 package com.solvd.carinatestautomation.web;
 
-import com.beust.ah.A;
 import com.zebrunner.carina.core.AbstractTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
