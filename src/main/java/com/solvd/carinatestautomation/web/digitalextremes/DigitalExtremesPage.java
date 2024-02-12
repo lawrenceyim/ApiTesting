@@ -1,4 +1,4 @@
-package com.solvd.carinatestautomation.web;
+package com.solvd.carinatestautomation.web.digitalextremes;
 
 import com.zebrunner.carina.utils.config.Configuration;
 import com.zebrunner.carina.webdriver.gui.AbstractPage;

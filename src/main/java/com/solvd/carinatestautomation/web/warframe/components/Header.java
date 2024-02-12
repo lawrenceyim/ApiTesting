@@ -1,8 +1,9 @@
-package com.solvd.carinatestautomation.web.components;
+package com.solvd.carinatestautomation.web.warframe.components;
 
-import com.solvd.carinatestautomation.web.HomePage;
-import com.solvd.carinatestautomation.web.PlayWarframeYouTubePage;
-import com.solvd.carinatestautomation.web.RotatingPage;
+import com.solvd.carinatestautomation.web.forums.ForumsPage;
+import com.solvd.carinatestautomation.web.warframe.HomePage;
+import com.solvd.carinatestautomation.web.youtube.PlayWarframeYouTubePage;
+import com.solvd.carinatestautomation.web.warframe.RotatingPage;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import com.zebrunner.carina.webdriver.gui.AbstractUIObject;
 import org.openqa.selenium.SearchContext;
@@ -14,6 +15,10 @@ public class Header extends AbstractUIObject {
     private ExtendedWebElement headerNavButton;
     @FindBy(xpath = "//div[@id='header']//div[@class='HeaderMenuItem is-highlighted']")
     private ExtendedWebElement rotatingButton;
+    @FindBy(xpath = "//div[@class='HeaderDesktopMenu']//div[@id='drpNavCommunity']")
+    private ExtendedWebElement communityDropdownLabel;
+    @FindBy(xpath = "//div[@class='HeaderDesktopMenu']//a[contains(@href, 'https://forums.warframe.com')]")
+    private ExtendedWebElement forumsButton;
     @FindBy(xpath = "//div[@id='header']/div[@class='HeaderNavigationBar is-desktop']//div[@class='HeaderDesktopMenu']/div[@class='HeaderMenuItem HeaderMenuItem--external']/a")
     private ExtendedWebElement videosButton;
 
@@ -29,6 +34,13 @@ public class Header extends AbstractUIObject {
     public RotatingPage pressRotatingButton() {
         rotatingButton.click();
         return new RotatingPage(getDriver());
+    }
+
+
+    public ForumsPage pressForumsButton() {
+        communityDropdownLabel.hover();
+        forumsButton.clickIfPresent(1);
+        return new ForumsPage(getDriver());
     }
 
     public PlayWarframeYouTubePage pressVideosButton() {

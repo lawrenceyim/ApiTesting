@@ -1,13 +1,13 @@
-package com.solvd.carinatestautomation.web;
+package com.solvd.carinatestautomation.web.warframe;
 
 import com.zebrunner.carina.utils.config.Configuration;
 import com.zebrunner.carina.webdriver.gui.AbstractPage;
 import org.openqa.selenium.WebDriver;
 
-public class TermsOfUsePage extends AbstractPage {
-    public TermsOfUsePage(WebDriver driver) {
+public class EndUserLicenseAgreementPage extends AbstractPage {
+    public EndUserLicenseAgreementPage(WebDriver driver) {
         super(driver);
         setPageAbsoluteURL(Configuration.getRequired("home_url") +
-                Configuration.getRequired("terms_url"));
+                Configuration.getRequired("eula_us"));
     }
 }

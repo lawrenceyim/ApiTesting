@@ -1,9 +1,9 @@
-package com.solvd.carinatestautomation.web.components;
+package com.solvd.carinatestautomation.web.warframe.components;
 
-import com.solvd.carinatestautomation.web.DigitalExtremesPage;
-import com.solvd.carinatestautomation.web.EndUserLicenseAgreementPage;
-import com.solvd.carinatestautomation.web.PrivacyPolicyPage;
-import com.solvd.carinatestautomation.web.TermsOfUsePage;
+import com.solvd.carinatestautomation.web.digitalextremes.DigitalExtremesPage;
+import com.solvd.carinatestautomation.web.warframe.EndUserLicenseAgreementPage;
+import com.solvd.carinatestautomation.web.warframe.PrivacyPolicyPage;
+import com.solvd.carinatestautomation.web.warframe.TermsOfUsePage;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import com.zebrunner.carina.webdriver.gui.AbstractUIObject;
 import org.openqa.selenium.SearchContext;

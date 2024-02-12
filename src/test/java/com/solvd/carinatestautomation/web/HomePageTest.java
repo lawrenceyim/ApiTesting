@@ -1,5 +1,14 @@
 package com.solvd.carinatestautomation.web;
 
+import com.solvd.carinatestautomation.web.digitalextremes.DigitalExtremesPage;
+import com.solvd.carinatestautomation.web.forums.ForumsPage;
+import com.solvd.carinatestautomation.web.warframe.EndUserLicenseAgreementPage;
+import com.solvd.carinatestautomation.web.warframe.HomePage;
+import com.solvd.carinatestautomation.web.warframe.LandingPage;
+import com.solvd.carinatestautomation.web.warframe.PrivacyPolicyPage;
+import com.solvd.carinatestautomation.web.warframe.RotatingPage;
+import com.solvd.carinatestautomation.web.warframe.TermsOfUsePage;
+import com.solvd.carinatestautomation.web.youtube.PlayWarframeYouTubePage;
 import com.zebrunner.carina.core.AbstractTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -110,5 +119,17 @@ public class HomePageTest extends AbstractTest {
         endUserLicenseAgreementPage.open();
         Assert.assertTrue(endUserLicenseAgreementPage.isPageOpened(1),
                 "The End User License Agreement page did not open.");
+    }
+
+    @Test
+    public void verifyForumsButtonTest() {
+        LandingPage landingPage = new LandingPage(getDriver());
+        landingPage.open();
+        HomePage homePage = landingPage.pressGoToHomeButton();
+        homePage.open();
+        ForumsPage forumsPage = homePage.getHeader().pressForumsButton();
+        forumsPage.open();
+        Assert.assertTrue(forumsPage.isPageOpened(1),
+                "Forums page did not open");
     }
 }
