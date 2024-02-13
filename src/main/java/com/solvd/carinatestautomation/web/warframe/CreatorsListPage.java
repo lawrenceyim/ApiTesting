@@ -3,6 +3,7 @@ package com.solvd.carinatestautomation.web.warframe;
 import com.solvd.carinatestautomation.web.warframe.components.Footer;
 import com.solvd.carinatestautomation.web.warframe.components.Header;
 import com.zebrunner.carina.utils.config.Configuration;
+import com.zebrunner.carina.webdriver.decorator.PageOpeningStrategy;
 import com.zebrunner.carina.webdriver.gui.AbstractPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;

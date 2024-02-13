@@ -10,8 +10,8 @@ public class StorePageTest extends AbstractTest {
     public void verifyStorePageOpensTest() {
         StorePage storePage = new StorePage(getDriver());
         storePage.open();
-        Assert.assertTrue(storePage.isPageOpened(1));
-        Assert.assertTrue(storePage.isHeaderPresent());
+        Assert.assertTrue(storePage.isPageOpened(1), "The store page did not open.");
+        Assert.assertTrue(storePage.isHeaderPresent(),"The header is missing in the store page.");
     }
 
     @Test

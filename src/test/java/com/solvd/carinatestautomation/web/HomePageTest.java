@@ -37,9 +37,9 @@ public class HomePageTest extends AbstractTest {
         homePage.open();
         Assert.assertTrue(homePage.isPageOpened(1), "The home page did not open.");
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(homePage.getHeader().isUIObjectPresent(1),
+        softAssert.assertTrue(homePage.isHeaderPresent(),
                 "The home page did not have a header component.");
-        softAssert.assertTrue(homePage.getFooter().isUIObjectPresent(1),
+        softAssert.assertTrue(homePage.isFooterPresent(),
                 "The home page did not have a footer component.");
         softAssert.assertAll();
     }
@@ -51,7 +51,7 @@ public class HomePageTest extends AbstractTest {
         landingPage.open();
         HomePage homePage = landingPage.pressGoToHomeButton();
         homePage.open();
-        RotatingPage rotatingPage = homePage.getHeader().pressRotatingButton();
+        RotatingPage rotatingPage = homePage.pressRotatingButton();
         rotatingPage.open();
         Assert.assertTrue(rotatingPage.isPageOpened(1),
                 "The rotating page did not open.");
@@ -67,7 +67,7 @@ public class HomePageTest extends AbstractTest {
         landingPage.open();
         HomePage homePage = landingPage.pressGoToHomeButton();
         homePage.open();
-        PlayWarframeYouTubePage playWarframeYouTubePage = homePage.getHeader().pressVideosButton();
+        PlayWarframeYouTubePage playWarframeYouTubePage = homePage.pressVideosButton();
         playWarframeYouTubePage.open();
         Assert.assertTrue(playWarframeYouTubePage.isPageOpened(1),
                 "The Play Warframe YouTube page did not open.");
@@ -79,7 +79,7 @@ public class HomePageTest extends AbstractTest {
         landingPage.open();
         HomePage homePage = landingPage.pressGoToHomeButton();
         homePage.open();
-        DigitalExtremesPage digitalExtremesPage = homePage.getFooter().pressNewsButton();
+        DigitalExtremesPage digitalExtremesPage = homePage.pressNewsButton();
         digitalExtremesPage.open();
         Assert.assertTrue(digitalExtremesPage.isPageOpened(1),
                 "The Digital Extremes company page did not open.");
@@ -91,7 +91,7 @@ public class HomePageTest extends AbstractTest {
         landingPage.open();
         HomePage homePage = landingPage.pressGoToHomeButton();
         homePage.open();
-        TermsOfUsePage termsOfUsePage = homePage.getFooter().pressTermsOfUseButton();
+        TermsOfUsePage termsOfUsePage = homePage.pressTermsOfUseButton();
         termsOfUsePage.open();
         Assert.assertTrue(termsOfUsePage.isPageOpened(1),
                 "The Terms of Use page did not open.");
@@ -103,7 +103,7 @@ public class HomePageTest extends AbstractTest {
         landingPage.open();
         HomePage homePage = landingPage.pressGoToHomeButton();
         homePage.open();
-        PrivacyPolicyPage privacyPolicyPage = homePage.getFooter().pressPrivacyPolicyButton();
+        PrivacyPolicyPage privacyPolicyPage = homePage.pressPrivacyPolicyButton();
         privacyPolicyPage.open();
         Assert.assertTrue(privacyPolicyPage.isPageOpened(1),
                 "The Privacy Policy page did not open.");
@@ -115,7 +115,7 @@ public class HomePageTest extends AbstractTest {
         landingPage.open();
         HomePage homePage = landingPage.pressGoToHomeButton();
         homePage.open();
-        EndUserLicenseAgreementPage endUserLicenseAgreementPage = homePage.getFooter().pressEulaButton();
+        EndUserLicenseAgreementPage endUserLicenseAgreementPage = homePage.pressEulaButton();
         endUserLicenseAgreementPage.open();
         Assert.assertTrue(endUserLicenseAgreementPage.isPageOpened(1),
                 "The End User License Agreement page did not open.");
@@ -127,7 +127,7 @@ public class HomePageTest extends AbstractTest {
         landingPage.open();
         HomePage homePage = landingPage.pressGoToHomeButton();
         homePage.open();
-        ForumsPage forumsPage = homePage.getHeader().pressForumsButton();
+        ForumsPage forumsPage = homePage.pressForumsButton();
         forumsPage.open();
         Assert.assertTrue(forumsPage.isPageOpened(1),
                 "Forums page did not open");

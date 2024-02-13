@@ -11,7 +11,7 @@ public class ForumsPageTest extends AbstractTest {
     public void verifyForumsSearchTest() {
         ForumsPage forumsPage = new ForumsPage(getDriver());
         forumsPage.open();
-        Assert.assertTrue(forumsPage.isPageOpened(1));
+        Assert.assertTrue(forumsPage.isPageOpened(1), "The forums page did not open.");
         forumsPage.searchForums("Riven");
         Assert.assertEquals(forumsPage.getCurrentUrl(), "https://forums.warframe.com/search/?q=Riven&quick=1");
     }
