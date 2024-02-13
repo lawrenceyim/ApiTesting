@@ -1,6 +1,5 @@
 package com.solvd.carinatestautomation.web.youtube;
 
-import com.zebrunner.carina.utils.config.Configuration;
 import com.zebrunner.carina.webdriver.gui.AbstractPage;
 import org.openqa.selenium.WebDriver;
 

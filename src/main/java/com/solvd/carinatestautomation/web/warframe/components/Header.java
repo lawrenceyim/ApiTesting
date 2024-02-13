@@ -2,8 +2,8 @@ package com.solvd.carinatestautomation.web.warframe.components;
 
 import com.solvd.carinatestautomation.web.forums.ForumsPage;
 import com.solvd.carinatestautomation.web.warframe.HomePage;
-import com.solvd.carinatestautomation.web.youtube.PlayWarframeYouTubePage;
 import com.solvd.carinatestautomation.web.warframe.RotatingPage;
+import com.solvd.carinatestautomation.web.youtube.PlayWarframeYouTubePage;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import com.zebrunner.carina.webdriver.gui.AbstractUIObject;
 import org.openqa.selenium.SearchContext;
@@ -27,24 +27,28 @@ public class Header extends AbstractUIObject {
     }
 
     public HomePage pressHeaderNavButton() {
-        headerNavButton.click();
+        headerNavButton.scrollTo();
+        headerNavButton.clickIfPresent(1);
         return new HomePage(getDriver());
     }
 
     public RotatingPage pressRotatingButton() {
-        rotatingButton.click();
+        rotatingButton.scrollTo();
+        rotatingButton.clickIfPresent(1);
         return new RotatingPage(getDriver());
     }
 
 
     public ForumsPage pressForumsButton() {
+        communityDropdownLabel.scrollTo();
         communityDropdownLabel.hover();
         forumsButton.clickIfPresent(1);
         return new ForumsPage(getDriver());
     }
 
     public PlayWarframeYouTubePage pressVideosButton() {
-        videosButton.click();
+        videosButton.scrollTo();
+        videosButton.clickIfPresent(1);
         return new PlayWarframeYouTubePage(getDriver());
     }
 }

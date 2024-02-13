@@ -20,6 +20,7 @@ public class ForumsPage extends AbstractPage {
     // The URL is being appended to the url from _config.properties
     public ForumsPage(WebDriver driver) {
         super(driver);
+        setPageOpeningStrategy(PageOpeningStrategy.BY_URL);
         setPageAbsoluteURL(Configuration.getRequired("forums_home_url"));
     }
 

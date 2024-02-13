@@ -7,22 +7,15 @@ import com.zebrunner.carina.webdriver.gui.AbstractPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
-public class HomePage extends AbstractPage {
+public class CreatorsListPage extends AbstractPage {
     @FindBy(id = "header")
     private Header header;
     @FindBy(id = "footer")
     private Footer footer;
 
-    public HomePage(WebDriver driver) {
+    public CreatorsListPage(WebDriver driver) {
         super(driver);
-        setPageAbsoluteURL(Configuration.getRequired("home_url"));
-    }
-
-    public Header getHeader() {
-        return header;
-    }
-
-    public Footer getFooter() {
-        return footer;
+        setPageAbsoluteURL(Configuration.getRequired("home_url") +
+                Configuration.getRequired("creators_list_url"));
     }
 }
