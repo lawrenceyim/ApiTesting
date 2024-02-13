@@ -15,4 +15,13 @@ public class ForumsPageTest extends AbstractTest {
         forumsPage.searchForums("Riven");
         Assert.assertEquals(forumsPage.getCurrentUrl(), "https://forums.warframe.com/search/?q=Riven&quick=1");
     }
+
+    @Test
+    public void verifyHomeButtonWorksTest() {
+        ForumsPage forumsPage = new ForumsPage(getDriver());
+        forumsPage.open();
+        forumsPage.searchForums("Riven");
+        forumsPage.pressHomeButton();
+        Assert.assertEquals(forumsPage.getCurrentUrl(), "https://forums.warframe.com/");
+    }
 }

@@ -11,6 +11,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
 public class Header extends AbstractUIObject {
+    @FindBy(xpath = "//a[contains(@href, 'http://forums.warframe.com')]")
+    private ExtendedWebElement homebutton;
     @FindBy(xpath = "//a[contains(@href, 'http://warframe.com/news')]")
     private ExtendedWebElement newsButton;
     @FindBy(xpath = "//a[contains(@href, 'https://www.warframe.com/community/creators/list')]")
@@ -22,6 +24,11 @@ public class Header extends AbstractUIObject {
 
     public Header(WebDriver driver, SearchContext searchContext) {
         super(driver, searchContext);
+    }
+
+    public void pressHomeButton() {
+        homebutton.scrollTo();
+        homebutton.clickIfPresent(1);
     }
 
     public HomePage pressNewsButton() {
