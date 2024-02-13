@@ -25,6 +25,7 @@ public class ForumsPage extends AbstractPage {
     }
 
     public void searchForums(String searchInput) {
+        searchInputBar.scrollTo();
         searchInputBar.type(searchInput);
         searchSubmitButton.clickIfPresent(1);
     }
