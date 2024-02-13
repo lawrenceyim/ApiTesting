@@ -19,4 +19,20 @@ public class CreatorsPageTest extends AbstractTest {
         softAssert.assertTrue(creatorsPage.isProgramOverviewButtonPresent());
         softAssert.assertAll();
     }
+
+    @Test
+    public void verifyCreatorsButtonTest() {
+        CreatorsPage creatorsPage = new CreatorsPage(getDriver());
+        creatorsPage.open();
+        CreatorsListPage creatorsListPage = creatorsPage.pressCreatorsButton();
+        creatorsListPage.open();
+        Assert.assertEquals(creatorsListPage.getCurrentUrl(), "https://www.warframe.com/community/creators/list");
+    }
+
+    @Test
+    public void verifyProgramViewButtonTest() {
+        CreatorsPage creatorsPage = new CreatorsPage(getDriver());
+        creatorsPage.open();
+        Assert.assertEquals(creatorsPage.getCurrentUrl(), "https://www.warframe.com/community/creators");
+    }
 }

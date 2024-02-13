@@ -29,15 +29,15 @@ public class CreatorsListPage extends AbstractPage {
         return header.isUIObjectPresent(1);
     }
 
+    public void pressCreatorsButton() {
+        creatorsButton.scrollTo();
+        creatorsButton.clickIfPresent(1);
+    }
+
     public CreatorsPage pressProgramOverviewButton() {
         programOverviewButton.scrollTo();
         programOverviewButton.clickIfPresent(1);
         return new CreatorsPage(getDriver());
-    }
-
-    public void pressCreatorsButton() {
-        creatorsButton.scrollTo();
-        creatorsButton.clickIfPresent(1);
     }
 
     public boolean isProgramOverviewButtonPresent() {
