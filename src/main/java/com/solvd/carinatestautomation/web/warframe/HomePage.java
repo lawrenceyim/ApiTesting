@@ -38,7 +38,7 @@ public class HomePage extends AbstractPage {
     }
 
     public DigitalExtremesPage pressNewsButton() {
-        return header.pressHeaderNavButton().pressNewsButton();
+        return footer.pressNewsButton();
     }
 
     public ForumsPage pressForumsButton() {

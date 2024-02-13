@@ -57,10 +57,6 @@ public class HomePageTest extends AbstractTest {
                 "The rotating page did not open.");
     }
 
-    // This test currently fails because:
-    //      com.zebrunner.carina.utils.exception.InvalidConfigurationException:
-    //      Getting the value of parameter 'url' as required failed: the value is missing.
-    // This may be caused by YouTube page displaying a different URL until the page is fully loaded
     @Test
     public void verifyVideosButtonTest() {
         LandingPage landingPage = new LandingPage(getDriver());
