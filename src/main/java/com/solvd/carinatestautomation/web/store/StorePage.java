@@ -15,7 +15,11 @@ public class StorePage extends AbstractPage {
         setPageAbsoluteURL(Configuration.getRequired("store_home_url"));
     }
 
-    public Header getHeader() {
-        return header;
+    public boolean isHeaderPresent() {
+        return header.isUIObjectPresent(1);
+    }
+
+    public void searchStore(String searchInput) {
+        header.searchStore(searchInput);
     }
 }

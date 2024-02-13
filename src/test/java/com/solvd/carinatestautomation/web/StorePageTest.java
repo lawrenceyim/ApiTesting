@@ -7,12 +7,18 @@ import org.testng.annotations.Test;
 
 public class StorePageTest extends AbstractTest {
     @Test
-    public void verifyStoreSearchTest() {
+    public void verifyStorePageOpensTest() {
         StorePage storePage = new StorePage(getDriver());
         storePage.open();
         Assert.assertTrue(storePage.isPageOpened(1));
-        Assert.assertTrue(storePage.getHeader().isUIObjectPresent(1));
-        storePage.getHeader().searchStore("hoodie");
+        Assert.assertTrue(storePage.isHeaderPresent());
+    }
+
+    @Test
+    public void verifySearchWorksTest() {
+        StorePage storePage = new StorePage(getDriver());
+        storePage.open();
+        storePage.searchStore("hoodie");
         Assert.assertEquals(storePage.getCurrentUrl(1),
                 "https://store.warframe.com/search?type=product%2Carticle%2Cpage&q=hoodie*");
     }
