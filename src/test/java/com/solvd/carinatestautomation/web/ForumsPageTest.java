@@ -12,5 +12,6 @@ public class ForumsPageTest extends AbstractTest {
         forumsPage.open();
         Assert.assertTrue(forumsPage.isPageOpened(1));
         forumsPage.searchForums("Riven");
+        Assert.assertEquals(forumsPage.getCurrentUrl(), "https://forums.warframe.com/search/?q=riven&quick=1");
     }
 }
