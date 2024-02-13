@@ -12,11 +12,11 @@ public class CreatorsPageTest extends AbstractTest {
     public void verifyCreatorsPageOpens() {
         CreatorsPage creatorsPage = new CreatorsPage(getDriver());
         creatorsPage.open();
-        Assert.assertTrue(creatorsPage.isPageOpened(1));
+        Assert.assertTrue(creatorsPage.isPageOpened(1), "Creators page didn't open.");
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(creatorsPage.isHeaderPresent());
-        softAssert.assertTrue(creatorsPage.isCreatorsButtonPresent());
-        softAssert.assertTrue(creatorsPage.isProgramOverviewButtonPresent());
+        softAssert.assertTrue(creatorsPage.isHeaderPresent(), "Header is missing.");
+        softAssert.assertTrue(creatorsPage.isCreatorsButtonPresent(), "Creators button is missing.");
+        softAssert.assertTrue(creatorsPage.isProgramOverviewButtonPresent(), "Creators list button is missing.");
         softAssert.assertAll();
     }
 
@@ -26,13 +26,17 @@ public class CreatorsPageTest extends AbstractTest {
         creatorsPage.open();
         CreatorsListPage creatorsListPage = creatorsPage.pressCreatorsButton();
         creatorsListPage.open();
-        Assert.assertEquals(creatorsListPage.getCurrentUrl(), "https://www.warframe.com/community/creators/list");
+        Assert.assertEquals(creatorsListPage.getCurrentUrl(),
+                "https://www.warframe.com/community/creators/list",
+                "Creators list page URL does not match.");
     }
 
     @Test
     public void verifyProgramViewButtonTest() {
         CreatorsPage creatorsPage = new CreatorsPage(getDriver());
         creatorsPage.open();
-        Assert.assertEquals(creatorsPage.getCurrentUrl(), "https://www.warframe.com/community/creators");
+        Assert.assertEquals(creatorsPage.getCurrentUrl(),
+                "https://www.warframe.com/community/creators",
+                "Creators page URL does not match.");
     }
 }

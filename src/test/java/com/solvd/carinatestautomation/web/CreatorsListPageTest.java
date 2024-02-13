@@ -12,11 +12,11 @@ public class CreatorsListPageTest extends AbstractTest {
     public void verifyCreatorsListPageOpens() {
         CreatorsListPage creatorsListPage = new CreatorsListPage(getDriver());
         creatorsListPage.open();
-        Assert.assertTrue(creatorsListPage.isPageOpened(1));
+        Assert.assertTrue(creatorsListPage.isPageOpened(1), "Creators list page didn't open.");
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(creatorsListPage.isHeaderPresent());
-        softAssert.assertTrue(creatorsListPage.isCreatorsButtonPresent());
-        softAssert.assertTrue(creatorsListPage.isProgramOverviewButtonPresent());
+        softAssert.assertTrue(creatorsListPage.isHeaderPresent(), "Header is missing.");
+        softAssert.assertTrue(creatorsListPage.isCreatorsButtonPresent(), "Creators button is missing.");
+        softAssert.assertTrue(creatorsListPage.isProgramOverviewButtonPresent(), "Program overview button is missing.");
         softAssert.assertAll();
     }
 
@@ -25,7 +25,9 @@ public class CreatorsListPageTest extends AbstractTest {
         CreatorsListPage creatorsListPage = new CreatorsListPage(getDriver());
         creatorsListPage.open();
         creatorsListPage.pressCreatorsButton();
-        Assert.assertEquals(creatorsListPage.getCurrentUrl(), "https://www.warframe.com/community/creators/list");
+        Assert.assertEquals(creatorsListPage.getCurrentUrl(),
+                "https://www.warframe.com/community/creators/list",
+                "Creators list page URL does not match");
     }
 
     @Test
@@ -34,7 +36,9 @@ public class CreatorsListPageTest extends AbstractTest {
         creatorsListPage.open();
         CreatorsPage creatorsPage = creatorsListPage.pressProgramOverviewButton();
         creatorsPage.open();
-        Assert.assertTrue(creatorsPage.isPageOpened(1));
-        Assert.assertEquals(creatorsPage.getCurrentUrl(), "https://www.warframe.com/community/creators");
+        Assert.assertTrue(creatorsPage.isPageOpened(1), "Creators page didn't open.");
+        Assert.assertEquals(creatorsPage.getCurrentUrl(),
+                "https://www.warframe.com/community/creators",
+                "Creators page URL does not match.");
     }
 }

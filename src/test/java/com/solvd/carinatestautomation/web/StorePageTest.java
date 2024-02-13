@@ -20,6 +20,7 @@ public class StorePageTest extends AbstractTest {
         storePage.open();
         storePage.searchStore("hoodie");
         Assert.assertEquals(storePage.getCurrentUrl(1),
-                "https://store.warframe.com/search?type=product%2Carticle%2Cpage&q=hoodie*");
+                "https://store.warframe.com/search?type=product%2Carticle%2Cpage&q=hoodie*",
+                "Store URL do not match");
     }
 }

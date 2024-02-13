@@ -12,7 +12,9 @@ public class ForumsPageTest extends AbstractTest {
         forumsPage.open();
         Assert.assertTrue(forumsPage.isPageOpened(1), "The forums page did not open.");
         forumsPage.searchForums("Riven");
-        Assert.assertEquals(forumsPage.getCurrentUrl(), "https://forums.warframe.com/search/?q=Riven&quick=1");
+        Assert.assertEquals(forumsPage.getCurrentUrl(),
+                "https://forums.warframe.com/search/?q=Riven&quick=1",
+                "Forums search page URL does no match.");
     }
 
     @Test
@@ -20,8 +22,12 @@ public class ForumsPageTest extends AbstractTest {
         ForumsPage forumsPage = new ForumsPage(getDriver());
         forumsPage.open();
         forumsPage.searchForums("Riven");
-        Assert.assertEquals(forumsPage.getCurrentUrl(), "https://forums.warframe.com/search/?q=Riven&quick=1");
+        Assert.assertEquals(forumsPage.getCurrentUrl(),
+                "https://forums.warframe.com/search/?q=Riven&quick=1",
+                "Forums search page URL does not match.");
         forumsPage.pressHomeButton();
-        Assert.assertEquals(forumsPage.getCurrentUrl(), "https://forums.warframe.com/");
+        Assert.assertEquals(forumsPage.getCurrentUrl(),
+                "https://forums.warframe.com/",
+                "Forums home page URL does not match.");
     }
 }
