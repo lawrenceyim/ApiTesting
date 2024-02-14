@@ -11,15 +11,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
 public class Header extends AbstractUIObject {
-    @FindBy(xpath = "//div[@id='header']//a[contains(@href, 'https://www.warframe.com')]")
+    @FindBy(xpath = ".//a[contains(@href, 'https://www.warframe.com')]")
     private ExtendedWebElement headerNavButton;
-    @FindBy(xpath = "//div[@id='header']//div[@class='HeaderMenuItem is-highlighted']")
+    @FindBy(xpath = ".//div[@class='HeaderMenuItem is-highlighted']")
     private ExtendedWebElement rotatingButton;
-    @FindBy(xpath = "//div[@class='HeaderDesktopMenu']//div[@id='drpNavCommunity']")
+    @FindBy(xpath = ".//div[@class='HeaderDesktopMenu']//div[@id='drpNavCommunity']")
     private ExtendedWebElement communityDropdownLabel;
-    @FindBy(xpath = "//div[@class='HeaderDesktopMenu']//a[contains(@href, 'https://forums.warframe.com')]")
+    @FindBy(xpath = ".//div[@class='HeaderDesktopMenu']//a[contains(@href, 'https://forums.warframe.com')]")
     private ExtendedWebElement forumsButton;
-    @FindBy(xpath = "//div[@id='header']/div[@class='HeaderNavigationBar is-desktop']//div[@class='HeaderDesktopMenu']/div[@class='HeaderMenuItem HeaderMenuItem--external']/a")
+    @FindBy(xpath = "./div[@class='HeaderNavigationBar is-desktop']//div[@class='HeaderDesktopMenu']/div[@class='HeaderMenuItem HeaderMenuItem--external']/a")
     private ExtendedWebElement videosButton;
 
     public Header(WebDriver driver, SearchContext searchContext) {

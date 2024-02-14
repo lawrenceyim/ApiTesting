@@ -11,15 +11,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
 public class Header extends AbstractUIObject {
-    @FindBy(xpath = "//a[contains(@href, 'http://forums.warframe.com')]")
+    @FindBy(xpath = ".//a[contains(@href, 'http://forums.warframe.com')]")
     private ExtendedWebElement homebutton;
-    @FindBy(xpath = "//a[contains(@href, 'http://warframe.com/news')]")
+    @FindBy(xpath = ".//a[contains(@href, 'http://warframe.com/news')]")
     private ExtendedWebElement newsButton;
-    @FindBy(xpath = "//a[contains(@href, 'https://www.warframe.com/community/creators/list')]")
+    @FindBy(xpath = ".//a[contains(@href, 'https://www.warframe.com/community/creators/list')]")
     private ExtendedWebElement creatorsButton;
-    @FindBy(xpath = "//a[contains(@href, 'http://store.warframe.com/')]")
+    @FindBy(xpath = ".//a[contains(@href, 'http://store.warframe.com/')]")
     private ExtendedWebElement storeButton;
-    @FindBy(xpath = "//a[contains(@href, 'https://warframe.com/prime-access')]")
+    @FindBy(xpath = ".//a[contains(@href, 'https://warframe.com/prime-access')]")
     private ExtendedWebElement primeAccessButton;
 
     public Header(WebDriver driver, SearchContext searchContext) {
