@@ -26,6 +26,7 @@ public class CreatorsPageTest extends AbstractTest {
         creatorsPage.open();
         CreatorsListPage creatorsListPage = creatorsPage.pressCreatorsButton();
         creatorsListPage.open();
+        Assert.assertTrue(creatorsListPage.isPageOpened(1), "Creators list page didn't open.");
         Assert.assertEquals(creatorsListPage.getCurrentUrl(),
                 "https://www.warframe.com/community/creators/list",
                 "Creators list page URL does not match.");
@@ -35,6 +36,7 @@ public class CreatorsPageTest extends AbstractTest {
     public void verifyProgramViewButtonTest() {
         CreatorsPage creatorsPage = new CreatorsPage(getDriver());
         creatorsPage.open();
+        creatorsPage.pressProgramOverviewButton();
         Assert.assertEquals(creatorsPage.getCurrentUrl(),
                 "https://www.warframe.com/community/creators",
                 "Creators page URL does not match.");

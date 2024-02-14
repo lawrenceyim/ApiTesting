@@ -12,7 +12,7 @@ import java.util.List;
 
 public class SearchResultPage extends AbstractPage {
     @FindAll(
-            @FindBy(xpath = "//div[@class='grid grid--uniform']/div[@class='grid__item grid-product medium-up--one-quarter small--one-half grid-product__has-quick-shop aos-init aos-animate']")
+            @FindBy(xpath = "//div[contains(@class, 'grid')]/div[contains(@class, 'grid__item')]")
     )
     List<Product> searchItems;
 

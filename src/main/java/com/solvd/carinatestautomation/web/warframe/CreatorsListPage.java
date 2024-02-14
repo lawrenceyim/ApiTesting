@@ -1,5 +1,6 @@
 package com.solvd.carinatestautomation.web.warframe;
 
+import com.solvd.carinatestautomation.web.warframe.components.CreatorsNavBar;
 import com.solvd.carinatestautomation.web.warframe.components.Footer;
 import com.solvd.carinatestautomation.web.warframe.components.Header;
 import com.zebrunner.carina.utils.config.Configuration;
@@ -13,11 +14,8 @@ public class CreatorsListPage extends AbstractPage {
     private Header header;
     @FindBy(id = "footer")
     private Footer footer;
-    // xpath for creators nav buttons are different in the creators and creators list page so a component can't be created
-    @FindBy(xpath = "//a[contains(@href, 'https://www.warframe.com/community/creators') and @class='navBtn apply ']")
-    private ExtendedWebElement programOverviewButton;
-    @FindBy(xpath = "//a[contains(@href, 'https://www.warframe.com/community/creators/list') and @class='navBtn creators  active ']")
-    private ExtendedWebElement creatorsButton;
+    @FindBy(id = "mainContent")
+    private CreatorsNavBar creatorsNavBar;
 
     public CreatorsListPage(WebDriver driver) {
         super(driver);
@@ -29,22 +27,19 @@ public class CreatorsListPage extends AbstractPage {
         return header.isUIObjectPresent(1);
     }
 
-    public void pressCreatorsButton() {
-        creatorsButton.scrollTo();
-        creatorsButton.clickIfPresent(1);
+    public CreatorsListPage pressCreatorsButton() {
+        return creatorsNavBar.pressCreatorsButton();
     }
 
     public CreatorsPage pressProgramOverviewButton() {
-        programOverviewButton.scrollTo();
-        programOverviewButton.clickIfPresent(1);
-        return new CreatorsPage(getDriver());
+        return creatorsNavBar.pressProgramOverviewButton();
     }
 
     public boolean isProgramOverviewButtonPresent() {
-        return programOverviewButton.isPresent(1);
+        return creatorsNavBar.isProgramOverviewButtonPresent();
     }
 
     public boolean isCreatorsButtonPresent() {
-        return programOverviewButton.isPresent(1);
+        return creatorsNavBar.isCreatorsButtonPresent();
     }
 }

@@ -1,11 +1,10 @@
 package com.solvd.carinatestautomation.web.warframe;
 
+import com.solvd.carinatestautomation.web.warframe.components.CreatorsNavBar;
 import com.solvd.carinatestautomation.web.warframe.components.Footer;
 import com.solvd.carinatestautomation.web.warframe.components.Header;
 import com.zebrunner.carina.utils.config.Configuration;
-import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import com.zebrunner.carina.webdriver.gui.AbstractPage;
-import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
@@ -14,11 +13,8 @@ public class CreatorsPage extends AbstractPage {
     private Header header;
     @FindBy(id = "footer")
     private Footer footer;
-    // xpath for creators nav buttons are different in the creators and creators list page so a component can't be created
-    @FindBy(xpath = "//a[contains(@href, 'https://www.warframe.com/community/creators') and @class='CreatorsNavButton CreatorsNavButton--list']")
-    private ExtendedWebElement programOverviewButton;
-    @FindBy(xpath = "//a[contains(@href, 'https://www.warframe.com/community/creators/list') and @class='CreatorsNavButton CreatorsNavButton--list']")
-    private ExtendedWebElement creatorsButton;
+    @FindBy(id = "mainContent")
+    private CreatorsNavBar creatorsNavBar;
 
     public CreatorsPage(WebDriver driver) {
         super(driver);
@@ -31,21 +27,18 @@ public class CreatorsPage extends AbstractPage {
     }
 
     public CreatorsListPage pressCreatorsButton() {
-        creatorsButton.scrollTo();
-        creatorsButton.clickIfPresent(1);
-        return new CreatorsListPage(getDriver());
+        return creatorsNavBar.pressCreatorsButton();
     }
 
-    public void pressProgramOverviewButton() {
-        programOverviewButton.scrollTo();
-        programOverviewButton.clickIfPresent(1);
+    public CreatorsPage pressProgramOverviewButton() {
+        return creatorsNavBar.pressProgramOverviewButton();
     }
 
     public boolean isProgramOverviewButtonPresent() {
-        return programOverviewButton.isPresent(1);
+        return creatorsNavBar.isProgramOverviewButtonPresent();
     }
 
     public boolean isCreatorsButtonPresent() {
-        return programOverviewButton.isPresent(1);
+        return creatorsNavBar.isCreatorsButtonPresent();
     }
 }

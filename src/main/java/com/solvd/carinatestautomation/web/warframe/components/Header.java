@@ -19,7 +19,7 @@ public class Header extends AbstractUIObject {
     private ExtendedWebElement communityDropdownLabel;
     @FindBy(xpath = ".//div[@class='HeaderDesktopMenu']//a[contains(@href, 'https://forums.warframe.com')]")
     private ExtendedWebElement forumsButton;
-    @FindBy(xpath = "./div[@class='HeaderNavigationBar is-desktop']//div[@class='HeaderDesktopMenu']/div[@class='HeaderMenuItem HeaderMenuItem--external']/a")
+    @FindBy(xpath = ".//div[@class='HeaderDesktopMenu']//a[contains(@href, 'https://www.youtube.com/user/playwarframe')]")
     private ExtendedWebElement videosButton;
 
     public Header(WebDriver driver, SearchContext searchContext) {
