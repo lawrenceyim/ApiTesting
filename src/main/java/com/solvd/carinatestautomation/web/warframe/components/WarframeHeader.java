@@ -2,11 +2,14 @@ package com.solvd.carinatestautomation.web.warframe.components;
 
 import com.solvd.carinatestautomation.web.forums.ForumsPage;
 import com.solvd.carinatestautomation.web.warframe.CrossProgressionPage;
+import com.solvd.carinatestautomation.web.warframe.DiscordInvitePage;
 import com.solvd.carinatestautomation.web.warframe.DownloadPage;
 import com.solvd.carinatestautomation.web.warframe.HomePage;
 import com.solvd.carinatestautomation.web.warframe.InitiatePackPage;
 import com.solvd.carinatestautomation.web.warframe.LoginPage;
 import com.solvd.carinatestautomation.web.warframe.MarketBundlesPage;
+import com.solvd.carinatestautomation.web.warframe.MobileAppPage;
+import com.solvd.carinatestautomation.web.warframe.NewPlayerGuidePage;
 import com.solvd.carinatestautomation.web.warframe.RotatingPage;
 import com.solvd.carinatestautomation.web.warframe.SearchPage;
 import com.solvd.carinatestautomation.web.warframe.UpdatesPage;
@@ -44,6 +47,12 @@ public class WarframeHeader extends AbstractUIObject {
     private ExtendedWebElement loginButton;
     @FindBy(xpath = "//div[@class='HeaderDesktopMenu']//a[contains(@href, 'https://www.warframe.com/market-bundles')]")
     private ExtendedWebElement marketBundlesButton;
+    @FindBy(xpath = "//div[@class='HeaderDesktopMenu']//a[contains(@href, 'https://www.warframe.com/mobile-app')]")
+    private ExtendedWebElement mobileCompanionAppButton;
+    @FindBy(xpath = "//div[@class='HeaderDesktopMenu']//a[contains(@href, 'https://www.warframe.com/news/new-player-guide')]")
+    private ExtendedWebElement newPlayerGuideButton;
+    @FindBy(xpath = "//div[@class='HeaderDesktopMenu']//a[contains(@href, 'https://discord.com/invite/playwarframe')]")
+    private ExtendedWebElement officialDiscordServerButton;
     @FindBy(xpath = ".//div[@class='HeaderMenuItem is-highlighted']")
     private ExtendedWebElement rotatingButton;
     @FindBy(xpath = ".//div[@class='HeaderDesktopMenu']//a[contains(@href, 'https://www.warframe.com/updates')]")
@@ -76,11 +85,11 @@ public class WarframeHeader extends AbstractUIObject {
             case MarketBundleButton:
                 return pressMarketBundleButton();
             case MobileCompanionAppButton:
-                return null;
+                return pressMobileCompanionAppButton();
             case NewPlayerGuideButton:
-                return null;
+                return pressNewPlayerGuideButton();
             case OfficialDiscordServerButton:
-                return null;
+                return pressOfficialDiscordServerButton();
             case OfficialMerchButton:
                 return null;
             case PlatinumAndBundlesButton:
@@ -187,6 +196,27 @@ public class WarframeHeader extends AbstractUIObject {
         storeDropdownLabel.hover();
         marketBundlesButton.clickIfPresent(1);
         return new MarketBundlesPage(getDriver());
+    }
+
+    private MobileAppPage pressMobileCompanionAppButton() {
+        gameDropdownLabel.scrollTo();
+        gameDropdownLabel.hover();
+        mobileCompanionAppButton.clickIfPresent(1);
+        return new MobileAppPage(getDriver());
+    }
+
+    private NewPlayerGuidePage pressNewPlayerGuideButton() {
+        guidesDropdownLabel.scrollTo();
+        guidesDropdownLabel.hover();
+        newPlayerGuideButton.clickIfPresent(1);
+        return new NewPlayerGuidePage(getDriver());
+    }
+
+    private DiscordInvitePage pressOfficialDiscordServerButton() {
+        communityDropdownLabel.scrollTo();
+        communityDropdownLabel.hover();
+        officialDiscordServerButton.clickIfPresent(1);
+        return new DiscordInvitePage(getDriver());
     }
 
     private RotatingPage pressRotatingButton() {
