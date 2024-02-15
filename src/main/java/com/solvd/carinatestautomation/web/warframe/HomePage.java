@@ -1,20 +1,19 @@
 package com.solvd.carinatestautomation.web.warframe;
 
 import com.solvd.carinatestautomation.web.digitalextremes.DigitalExtremesPage;
-import com.solvd.carinatestautomation.web.forums.ForumsPage;
-import com.solvd.carinatestautomation.web.warframe.components.Footer;
-import com.solvd.carinatestautomation.web.warframe.components.Header;
-import com.solvd.carinatestautomation.web.youtube.PlayWarframeYouTubePage;
+import com.solvd.carinatestautomation.web.warframe.components.HeaderButton;
+import com.solvd.carinatestautomation.web.warframe.components.WarframeFooter;
+import com.solvd.carinatestautomation.web.warframe.components.WarframeHeader;
 import com.zebrunner.carina.utils.config.Configuration;
 import com.zebrunner.carina.webdriver.gui.AbstractPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
-public class HomePage extends AbstractPage {
+public class HomePage extends AbstractPage implements IWarframeHeader {
     @FindBy(id = "header")
-    private Header header;
+    private WarframeHeader warframeHeader;
     @FindBy(id = "footer")
-    private Footer footer;
+    private WarframeFooter warframeFooter;
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -22,38 +21,31 @@ public class HomePage extends AbstractPage {
     }
 
     public boolean isHeaderPresent() {
-        return header.isUIObjectPresent(1);
+        return warframeHeader.isUIObjectPresent(1);
     }
 
     public boolean isFooterPresent() {
-        return footer.isUIObjectPresent(1);
+        return warframeFooter.isUIObjectPresent(1);
     }
 
-    public RotatingPage pressRotatingButton() {
-        return header.pressRotatingButton();
-    }
-
-    public PlayWarframeYouTubePage pressVideosButton() {
-        return header.pressVideosButton();
+    @Override
+    public AbstractPage pressHeaderButton(HeaderButton button) {
+        return warframeHeader.pressButton(button);
     }
 
     public DigitalExtremesPage pressNewsButton() {
-        return footer.pressNewsButton();
-    }
-
-    public ForumsPage pressForumsButton() {
-        return header.pressForumsButton();
+        return warframeFooter.pressNewsButton();
     }
 
     public TermsOfUsePage pressTermsOfUseButton() {
-        return footer.pressTermsOfUseButton();
+        return warframeFooter.pressTermsOfUseButton();
     }
 
     public PrivacyPolicyPage pressPrivacyPolicyButton() {
-        return footer.pressPrivacyPolicyButton();
+        return warframeFooter.pressPrivacyPolicyButton();
     }
 
     public EndUserLicenseAgreementPage pressEulaButton() {
-        return footer.pressEulaButton();
+        return warframeFooter.pressEulaButton();
     }
 }

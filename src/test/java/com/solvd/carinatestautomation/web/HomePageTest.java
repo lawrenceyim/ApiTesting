@@ -8,6 +8,7 @@ import com.solvd.carinatestautomation.web.warframe.LandingPage;
 import com.solvd.carinatestautomation.web.warframe.PrivacyPolicyPage;
 import com.solvd.carinatestautomation.web.warframe.RotatingPage;
 import com.solvd.carinatestautomation.web.warframe.TermsOfUsePage;
+import com.solvd.carinatestautomation.web.warframe.components.HeaderButton;
 import com.solvd.carinatestautomation.web.youtube.PlayWarframeYouTubePage;
 import com.zebrunner.carina.core.AbstractTest;
 import org.testng.Assert;
@@ -51,7 +52,7 @@ public class HomePageTest extends AbstractTest {
         landingPage.open();
         HomePage homePage = landingPage.pressGoToHomeButton();
         homePage.open();
-        RotatingPage rotatingPage = homePage.pressRotatingButton();
+        RotatingPage rotatingPage = (RotatingPage) homePage.pressHeaderButton(HeaderButton.RotatingPageButton);
         rotatingPage.open();
         Assert.assertTrue(rotatingPage.isPageOpened(1),
                 "The rotating page did not open.");
@@ -63,7 +64,8 @@ public class HomePageTest extends AbstractTest {
         landingPage.open();
         HomePage homePage = landingPage.pressGoToHomeButton();
         homePage.open();
-        PlayWarframeYouTubePage playWarframeYouTubePage = homePage.pressVideosButton();
+        PlayWarframeYouTubePage playWarframeYouTubePage =
+                (PlayWarframeYouTubePage) homePage.pressHeaderButton(HeaderButton.VideosButton);
         playWarframeYouTubePage.open();
         Assert.assertTrue(playWarframeYouTubePage.isPageOpened(1),
                 "The Play Warframe YouTube page did not open.");
@@ -123,7 +125,7 @@ public class HomePageTest extends AbstractTest {
         landingPage.open();
         HomePage homePage = landingPage.pressGoToHomeButton();
         homePage.open();
-        ForumsPage forumsPage = homePage.pressForumsButton();
+        ForumsPage forumsPage = (ForumsPage) homePage.pressHeaderButton(HeaderButton.ForumsButton);
         forumsPage.open();
         Assert.assertTrue(forumsPage.isPageOpened(1),
                 "Forums page did not open");

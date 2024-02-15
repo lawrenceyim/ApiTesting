@@ -1,7 +1,7 @@
 package com.solvd.carinatestautomation.web.warframe;
 
 import com.solvd.carinatestautomation.web.forums.components.Header;
-import com.solvd.carinatestautomation.web.warframe.components.Footer;
+import com.solvd.carinatestautomation.web.warframe.components.WarframeFooter;
 import com.zebrunner.carina.utils.config.Configuration;
 import com.zebrunner.carina.webdriver.gui.AbstractPage;
 import org.openqa.selenium.WebDriver;
@@ -11,7 +11,7 @@ public class PrimeAccessPage extends AbstractPage {
     @FindBy(id = "header")
     private Header header;
     @FindBy(id = "footer")
-    private Footer footer;
+    private WarframeFooter warframeFooter;
 
     public PrimeAccessPage(WebDriver driver) {
         super(driver);

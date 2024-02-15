@@ -10,7 +10,7 @@ import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
-public class Footer extends AbstractUIObject {
+public class WarframeFooter extends AbstractUIObject {
     @FindBy(xpath = ".//a[contains(@href, 'https://www.warframe.com/zendesk')]")
     private ExtendedWebElement supportButton;
     @FindBy(xpath = ".//a[contains(@href, 'https://www.digitalextremes.com')]")
@@ -24,7 +24,7 @@ public class Footer extends AbstractUIObject {
     @FindBy(xpath = ".//div[@id='ot-sdk-btn']")
     private ExtendedWebElement cookiesSettingsButton;
 
-    public Footer(WebDriver driver, SearchContext searchContext) {
+    public WarframeFooter(WebDriver driver, SearchContext searchContext) {
         super(driver, searchContext);
     }
 
