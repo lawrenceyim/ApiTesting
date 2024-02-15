@@ -1,4 +1,4 @@
-package com.solvd.carinatestautomation.web.warframe;
+package com.solvd.carinatestautomation.web.discord;
 
 import com.zebrunner.carina.utils.config.Configuration;
 import com.zebrunner.carina.webdriver.gui.AbstractPage;

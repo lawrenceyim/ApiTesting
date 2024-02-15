@@ -1,8 +1,8 @@
 package com.solvd.carinatestautomation.web.warframe.components;
 
+import com.solvd.carinatestautomation.web.discord.DiscordInvitePage;
 import com.solvd.carinatestautomation.web.forums.ForumsPage;
 import com.solvd.carinatestautomation.web.warframe.CrossProgressionPage;
-import com.solvd.carinatestautomation.web.warframe.DiscordInvitePage;
 import com.solvd.carinatestautomation.web.warframe.DownloadPage;
 import com.solvd.carinatestautomation.web.warframe.HomePage;
 import com.solvd.carinatestautomation.web.warframe.InitiatePackPage;
