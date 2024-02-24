@@ -1,5 +1,6 @@
 package com.solvd.carinatestautomation.api;
 
+import com.solvd.carinatestautomation.utils.SettingsXmlReader;
 import com.zebrunner.carina.api.AbstractApiMethodV2;
 import com.zebrunner.carina.api.apitools.builder.NotStringValuesProcessor;
 import com.zebrunner.carina.utils.config.Configuration;
@@ -10,7 +11,7 @@ public class GetGeocoding extends AbstractApiMethodV2 {
         replaceUrlPlaceholder("base_url", Configuration.getRequired("base_url"));
         replaceUrlPlaceholder("zip_code", String.valueOf(zipCode));
         replaceUrlPlaceholder("country_code", countryCode);
-        replaceUrlPlaceholder("app_id", Configuration.getRequired("app_id"));
+        replaceUrlPlaceholder("app_id", SettingsXmlReader.getApiId());
         ignorePropertiesProcessor(NotStringValuesProcessor.class);
     }
 }

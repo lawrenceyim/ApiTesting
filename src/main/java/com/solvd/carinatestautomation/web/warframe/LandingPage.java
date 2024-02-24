@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
 public class LandingPage extends AbstractPage {
-    @FindBy(xpath = "/html/body/div[2]/a") // Only on landing page
+    @FindBy(xpath = "//a[@id='lnkMain']")
     private ExtendedWebElement continueToHomeButton;
 
     public LandingPage(WebDriver driver) {
@@ -23,9 +23,5 @@ public class LandingPage extends AbstractPage {
 
     public ExtendedWebElement getContinueToHomeButton() {
         return continueToHomeButton;
-    }
-
-    public void setContinueToHomeButton(ExtendedWebElement continueToHomeButton) {
-        this.continueToHomeButton = continueToHomeButton;
     }
 }
